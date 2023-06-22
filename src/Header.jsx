@@ -6,7 +6,7 @@ function animate() {
     let tl = gsap.timeline();
     tl.from(".headshot", { x: 900, opacity: 0, duration: 1.5 });
     tl.to(
-        "h1",
+        ".header-h1s",
         {
             "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
             opacity: 1,
@@ -14,6 +14,16 @@ function animate() {
             duration: 1.2,
         },
         "-=.4"
+    );
+    tl.to(
+        ".header-para",
+        {
+            "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+        },
+        "-=1.3"
     );
     tl.to(
         ".headshot",
@@ -25,22 +35,17 @@ function animate() {
 function Header() {
     return (
         <div className="header-div">
-            <img
-                src="src\images\background3.jpg"
-                alt=""
-                className="background"
-            />
             <div className="headshot-div" onLoad={animate}>
                 <Grid container spacing={2}>
                     <Grid item xs={5} style={{ margin: "25px" }}>
                         <div className="headshot-headings">
-                            <h1 style={{marginRight: "15px"}}>Hi, I'm Bryan.</h1>
-                            <h1>
+                            <h1 className="header-h1s">Hi, I'm Bryan.</h1>
+                            <h1 className="header-h1s">
                             <TypeAnimation
                                 sequence={[
                                         2000,
                                     " I'm a Web Developer.",
-                                    2000, // wait 1s before replacing "Mice" with "Hamsters"
+                                    2000, 
                                     " I'm a Problem-Solver.",
                                     2000,
                                     " I'm a Cool Guy.",
@@ -49,8 +54,7 @@ function Header() {
                                 speed={1}
 
                                 style={{
-                                    fontSize: "3rem",
-                                //     display: "inline-block",
+                                    fontSize: "2.7rem",
                                 }}
                                 repeat={Infinity}
                             />
