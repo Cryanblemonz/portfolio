@@ -1,0 +1,74 @@
+import Grid from "@mui/material/Grid";
+import { gsap } from "gsap";
+import { TypeAnimation } from "react-type-animation";
+
+function animate() {
+    let tl = gsap.timeline();
+    tl.from(".headshot", { x: 900, opacity: 0, duration: 1.5 });
+    tl.to(
+        "h1",
+        {
+            "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+        },
+        "-=.4"
+    );
+    tl.to(
+        ".headshot",
+        { boxShadow: "5px 5px 5px #6464ff", x: -10, y: -10, duration: 0.9 },
+        "-=.8"
+    );
+}
+
+function Header() {
+    return (
+        <div className="header-div">
+            <img
+                src="src\images\background3.jpg"
+                alt=""
+                className="background"
+            />
+            <div className="headshot-div" onLoad={animate}>
+                <Grid container spacing={2}>
+                    <Grid item xs={5} style={{ margin: "25px" }}>
+                        <div className="headshot-headings">
+                            <h1 style={{marginRight: "15px"}}>Hi, I'm Bryan.</h1>
+                            <h1>
+                            <TypeAnimation
+                                sequence={[
+                                        2000,
+                                    " I'm a Web Developer.",
+                                    2000, // wait 1s before replacing "Mice" with "Hamsters"
+                                    " I'm a Problem-Solver.",
+                                    2000,
+                                    " I'm a Cool Guy.",
+                                ]}
+                                wrapper="span"
+                                speed={1}
+
+                                style={{
+                                    fontSize: "3rem",
+                                //     display: "inline-block",
+                                }}
+                                repeat={Infinity}
+                            />
+                            </h1>
+                        </div>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <img
+                            className="headshot"
+                            src="src\images\headshot.png"></img>
+                    </Grid>
+                </Grid>
+                <div className="header-para">
+                        <p><strong>Full-Stack</strong> web developer bringing a mix of technical skills and a business background to add maximum value to your project or organization.</p>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default Header;

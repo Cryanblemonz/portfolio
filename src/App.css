@@ -1,0 +1,70 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+
+.background{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;  
+  transform: translateZ(-10px) scale(2.1);
+  margin: 0;
+  
+}
+
+.header-div{
+  height: 100vh;
+  overflow-y: visible;
+  overflow-x: hidden;
+  perspective: 10px;
+}
+
+.headshot-div{
+  display: block;
+  margin: 50px auto 0 auto;
+  perspective: 10px;
+}
+
+.headshot{
+  display: block;
+  border-radius: 100%;
+  width: 80%;
+  color: #6464ff;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  font-size: 3rem;
+  font-family: montserrat;
+  text-align: right;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  opacity: 0;
+  transform: translateY(100px);
+  text-align: right;
+  font-weight: 900;
+}
+
+.header-para{
+  text-align: center;
+  color: white;
+  font-size: 1.8rem;
+  width: 70%;
+  display: block;
+  margin: 10px auto;
+}
+
+.technologies{
+  height: 100vh;
+  background: yellow;
+  margin: 0;
+  padding: 0;
+}
+
+.technologies h1{
+  color: black;
+  font-family: montserrat;
+  text-align: center;
+  font-weight: 900;
+}
