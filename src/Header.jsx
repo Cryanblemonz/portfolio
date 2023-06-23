@@ -39,7 +39,7 @@ function Header() {
                 <Grid container spacing={2}>
                     <Grid item xs={5} style={{ margin: "25px" }}>
                         <div className="headshot-headings">
-                            <h1 className="header-h1s">Hi, I'm Bryan.</h1>
+                            <h1 className="header-h1s">Hi, I'm Bryan.&nbsp;</h1>
                             <h1 className="header-h1s">
                             <TypeAnimation
                                 sequence={[
@@ -68,7 +68,7 @@ function Header() {
                     </Grid>
                 </Grid>
                 <div className="header-para">
-                        <p><strong>Full-Stack</strong> web developer bringing a mix of technical skills and a business background to add maximum value to your project or organization.</p>
+                        <p><strong className="full-stack">Full-Stack</strong> web developer bringing a mix of technical skills and a business background to add maximum value to your project or organization.</p>
                 </div>
             </div>
         </div>

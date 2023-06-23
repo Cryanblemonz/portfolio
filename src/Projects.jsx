@@ -5,49 +5,63 @@ import { useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 function Projects() {
-    const [topLeftSize, setTopLeftSize] = useState("200px");
-    const [topRightSize, setTopRightSize] = useState("200px");
-    const [bottomRightSize, setBottomRightSize] = useState("200px");
-    const [bottomLeftSize, setBottomLeftSize] = useState("200px");
-
-    function hoverTopLeft() {
-        setTopLeftSize("400px");
-        setTopRightSize("100px");
-        setBottomLeftSize("100px");
-        setBottomRightSize("100px");
-    }
-
-    function unHover() {
-        setTopLeftSize("200px");
-        setTopRightSize("200px");
-        setBottomLeftSize("200px");
-        setBottomRightSize("200px");
-    }
+    const [topLeftSize, setTopLeftSize] = useState("250px");
+    const [topRightSize, setTopRightSize] = useState("250px");
+    const [bottomRightSize, setBottomRightSize] = useState("250px");
+    const [bottomLeftSize, setBottomLeftSize] = useState("250px");
 
     function unTransform() {
-        gsap.to(".top-left", {x: 0, y: 0, height: 200, width: 200, duration: 0.3 });
-        gsap.to(".top-right", {x: 0, y: 0, height: 200, width: 200, duration: 0.3 });
-        gsap.to(".bottom-right", {x: 0, y: 0, height: 200, width: 200, duration: 0.3 });
+        gsap.to(".top-left", {
+            x: 0,
+            y: 0,
+            height: 250,
+            width: 250,
+            duration: 0.3,
+            borderRadius: "9999 0 0 0",
+        });
+        gsap.to(".top-right", {
+            x: 0,
+            y: 0,
+            height: 250,
+            width: 250,
+            duration: 0.3,
+            borderRadius: "0 9999 0 0",
+        });
+        gsap.to(".bottom-right", {
+            x: 0,
+            y: 0,
+            height: 250,
+            width: 250,
+            duration: 0.3,
+            borderRadius: "0 0 9999 0",
+        });
         gsap.to(".bottom-left", {
             x: 0,
             y: 0,
-            height: 200,
-            width: 200,
+            height: 250,
+            width: 250,
             duration: 0.3,
+            borderRadius: "0 0 0 9999 ",
         });
     }
 
     function transformTL() {
-        gsap.to(".top-left", { height: 400, width: 400, duration: 0.3 });
+        gsap.to(".top-left", { height: 450, width: 450, duration: 0.3 });
+        gsap.to(
+            ".top-left",
+            { borderRadius: "25 0 0 0", duration: 0.3 },
+            "-=2"
+        );
+
         gsap.to(".top-right", {
-            y: 300,
+            y: 350,
             height: 100,
             width: 100,
             duration: 0.3,
         });
         gsap.to(".bottom-right", { height: 100, width: 100, duration: 0.3 });
         gsap.to(".bottom-left", {
-            x: 300,
+            x: 350,
             height: 100,
             width: 100,
             duration: 0.3,
@@ -61,7 +75,12 @@ function Projects() {
             width: 100,
             duration: 0.3,
         });
-        gsap.to(".top-right", { height: 400, width: 400, duration: 0.3 });
+        gsap.to(".top-right", { height: 400, width: 650, duration: 0.3 });
+        gsap.to(
+            ".top-right",
+            { borderRadius: "0 25 0 0", duration: 0.3 },
+            "-=2"
+        );
         gsap.to(".bottom-right", { height: 100, width: 100, duration: 0.3 });
         gsap.to(".bottom-left", { height: 100, width: 100, duration: 0.3 });
     }
@@ -73,20 +92,51 @@ function Projects() {
             duration: 0.3,
         });
         gsap.to(".top-right", { height: 100, width: 100, duration: 0.3 });
-        gsap.to(".bottom-right", {y: -300, height: 400, width: 400, duration: 0.3 });
-        gsap.to(".bottom-left", {y: -300, height: 100, width: 100, duration: 0.3 });
+        gsap.to(".bottom-right", {
+            y: -300,
+            height: 400,
+            width: 600,
+            duration: 0.3,
+        });
+        gsap.to(
+                ".bottom-right",
+                { borderRadius: "0 0 25 0", duration: 0.3 },
+                "-=2"
+            );
+        gsap.to(".bottom-left", {
+            y: -300,
+            height: 100,
+            width: 100,
+            duration: 0.3,
+        });
     }
 
     function transformBL() {
         gsap.to(".top-left", {
-                x: 300,
+            x: 500,
             height: 100,
             width: 100,
             duration: 0.3,
         });
         gsap.to(".top-right", { height: 100, width: 100, duration: 0.3 });
-        gsap.to(".bottom-right", {y: -300, height: 100, width: 100, duration: 0.3 });
-        gsap.to(".bottom-left", {y: -300, height: 400, width: 400, duration: 0.3 });
+        gsap.to(".bottom-right", {
+            y: -300,
+            height: 100,
+            width: 100,
+            duration: 0.3,
+        });
+        gsap.to(".bottom-left", {
+            y: -300,
+            height: 400,
+            width: 600,
+            duration: 0.3,
+        });
+        gsap.to(
+            ".bottom-left",
+            { borderRadius: "0 0 0 25", duration: 0.7 },
+            "-=2"
+        );
+        gsap.to(".bottom-right", { height: 100, width: 100, duration: 0.3 });
     }
 
     return (
