@@ -173,9 +173,33 @@ function Technologies() {
                     </Grid>
                     <Grid item xs={3}>
                         <Language
+                            img="src\images\postgresql.png"
+                            text="PostgreSQL"
+                            className="language sqlite"
+                        />
+                                            </Grid>
+
+                    <Grid item xs={3}>
+                        <Language
                             img="src\images\jquery.png"
                             text="jQuery"
                             className="language jquery"
+                        />
+                    </Grid>
+                    <Grid item xs={3}>
+                        <Language
+                            img="src\images\gsap.png"
+                            text="GSAP"
+                            className="language gsap"
+                        />
+                    </Grid> 
+                </Grid>
+                <Grid container spacing={2} style={{ marginTop: "20px" }}>
+                    <Grid item xs={3}>
+                        <Language
+                            img="src\images\MUI.png"
+                            text="Material UI"
+                            className="language mui"
                         />
                     </Grid>
                     <Grid item xs={3}>
@@ -190,29 +214,6 @@ function Technologies() {
                             img="src\images\css.png"
                             text="CSS"
                             className="language css"
-                        />
-                    </Grid>
-                </Grid>
-                <Grid container spacing={2} style={{ marginTop: "20px" }}>
-                    <Grid item xs={3}>
-                        <Language
-                            img="src\images\sqlLite.png"
-                            text="SQLite"
-                            className="language sqlite"
-                        />
-                    </Grid>
-                    <Grid item xs={3}>
-                        <Language
-                            img="src\images\MUI.png"
-                            text="Material UI"
-                            className="language mui"
-                        />
-                    </Grid>
-                    <Grid item xs={3}>
-                        <Language
-                            img="src\images\gsap.png"
-                            text="GSAP"
-                            className="language gsap"
                         />
                     </Grid>
                     <Grid item xs={3}>

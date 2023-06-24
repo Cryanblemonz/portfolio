@@ -110,7 +110,7 @@ h1{
 
 .projects h1{
   font-size: 3rem;
-  margin-bottom: 5px;
+  margin-bottom: 25px;
 }
 
 .grid{
@@ -149,3 +149,22 @@ h1{
 .blue{
   background: blue;
 }
+
+.project-description{
+  opacity: 1;
+  color: white;
+  position: absolute; 
+  top: 100px;
+  width: 350px;
+  padding: 5px 20px;
+  left: 25px;
+  text-align: left;
+  line-height: 1.4;
+  font-size: 0;
+  opacity: 0;
+}
+
+.project-description h2{
+  font-family: montserrat;
+}
+
