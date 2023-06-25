@@ -1,32 +1,37 @@
 import { useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Language from "./Language";
 import { useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
+import Grid from "@mui/material/Grid";
 
 let rescueRoadDescription = {
-        header: "Rescue Road",
-        text: "Tinder for animal rescue! Users can view pets available for adoption and choose to like or dislike them, or choose to upload their own pet in need of a home. If a user likes a pet, they are provided contact information to move forward with giving the pet their forever home. Equipped with filters to ensure potential adopters only see pets that fit their home. Pictures are ran through an image recognition software to ensure that only animals are uploaded to the site."
-}
+    header: "Rescue Road",
+    text: "Tinder for animal rescue! Users can view pets available for adoption and choose to like or dislike them, or choose to upload their own pet in need of a home. If a user likes a pet, they are provided contact information to move forward with giving the pet their forever home. Equipped with filters to ensure potential adopters only see pets that fit their home. Pictures are ran through an image recognition software to ensure that only animals are uploaded to the site.",
+    madeWith: ["javascript", "react", "MongoDB", "node"],
+};
 
 let gymGenieDescription = {
-        header: "GymGenie",
-        text: "An all-in-one fitness platform, in which users can track daily exercise / calories / water intake, build custom workout routines through an API connection to a database of exercises, and log their workouts to track their progress."
-}
+    header: "GymGenie",
+    text: "An all-in-one fitness platform, in which users can track daily exercise / calories / water intake, build custom workout routines through an API connection to a database of exercises, and log their workouts to track their progress.",
+    madeWith: ["javascript", "jquery", "MongoDB", "node"],
+};
 
 let snakeDescription = {
-        header: "Snake",
-        text: "Feeling nostalgic about your old Nokia 6110? Try this remastered snake game! It has all of the features of the classic version, plus scorekeeping and difficulty controls. If you ever feel like becoming enraged, give nightmare mode a try!"
-}
+    header: "Snake",
+    text: "Feeling nostalgic about your old Nokia 6110? Try this remastered snake game! It has all of the features of the classic version, plus scorekeeping and difficulty controls. If you ever feel like becoming enraged, give nightmare mode a try!",
+    madeWith: ["javascript", "html", "css"],
+};
 
 let fitnessDescription = {
-        header: "Webb Fitness",
-        text: "A simple but slick business website for a local personal trainer. Made to showcase information about the trainer's fitness programs, encourage clients to get in touch, and funnel her client's questionaire answers to her email."
-}
+    header: "Webb Fitness",
+    text: "A simple but slick business website for a local personal trainer. Made to showcase information about the trainer's fitness programs, encourage clients to get in touch, and funnel her client's questionaire answers to her email.",
+    madeWith: ["javascript", "html", "css"],
+};
 
 function Projects() {
     const [project, setProject] = useState({});
-
 
     function unTransform() {
         gsap.to(".top-left", {
@@ -61,17 +66,26 @@ function Projects() {
             duration: 0.3,
             borderRadius: "0 0 0 9999 ",
         });
-        gsap.to(".project-description", {fontSize: "0", opacity: 0, duration: 0.3})
-        gsap.to(".project-description-p", {fontSize: "0", opacity: 0, duration: 0.3})
-
+        gsap.to(".project-description", {
+            fontSize: "0",
+            opacity: 0,
+            duration: 0.3,
+        });
+        gsap.to(".project-description-p", {
+            fontSize: "0",
+            opacity: 0,
+            duration: 0.3,
+        });
     }
 
     async function transformTL() {
-        gsap.to(".top-left", { height: 450, width: 450, duration: 0.3 });
         gsap.to(
-            ".top-left",
-            { borderRadius: "25 0 0 0", duration: .6}, "-=1"
-        );
+                ".top-left",
+                { borderRadius: "25 0 0 0", duration: 0.6 },
+                "-=1"
+            );
+        gsap.to(".top-left", { height: 450, width: 450, duration: 0.3 });
+
 
         gsap.to(".top-right", {
             y: 350,
@@ -85,11 +99,18 @@ function Projects() {
             height: 100,
             width: 100,
             duration: 0.3,
-        })
+        });
         setProject(rescueRoadDescription);
-        gsap.to(".project-description", {fontSize: "1.3rem", opacity: 1, duration: 0.3});
-        gsap.to(".project-description-p", {fontSize: "1.3rem", opacity: 1, duration: 0.3});
-
+        gsap.to(".project-description", {
+            fontSize: "1.3rem",
+            opacity: 1,
+            duration: 0.3,
+        });
+        gsap.to(".project-description-p", {
+            fontSize: "1.3rem",
+            opacity: 1,
+            duration: 0.3,
+        });
     }
 
     function transformTR() {
@@ -108,8 +129,16 @@ function Projects() {
         gsap.to(".bottom-right", { height: 100, width: 100, duration: 0.3 });
         gsap.to(".bottom-left", { height: 100, width: 100, duration: 0.3 });
         setProject(gymGenieDescription);
-        gsap.to(".project-description", {fontSize: "1.3rem", opacity: 1, duration: 0.3});
-        gsap.to(".project-description-p", {fontSize: "1.3rem", opacity: 1, duration: 0.3});
+        gsap.to(".project-description", {
+            fontSize: "1.3rem",
+            opacity: 1,
+            duration: 0.3,
+        });
+        gsap.to(".project-description-p", {
+            fontSize: "1.3rem",
+            opacity: 1,
+            duration: 0.3,
+        });
     }
 
     function transformBR() {
@@ -126,10 +155,10 @@ function Projects() {
             duration: 0.3,
         });
         gsap.to(
-                ".bottom-right",
-                { borderRadius: "0 0 25 0", duration: 0.3 },
-                "-=2"
-            );
+            ".bottom-right",
+            { borderRadius: "0 0 25 0", duration: 0.3 },
+            "-=2"
+        );
         gsap.to(".bottom-left", {
             y: -300,
             height: 100,
@@ -137,8 +166,16 @@ function Projects() {
             duration: 0.3,
         });
         setProject(fitnessDescription);
-        gsap.to(".project-description", {fontSize: "1.3rem", opacity: 1, duration: 0.3});
-        gsap.to(".project-description-p", {fontSize: "1.3rem", opacity: 1, duration: 0.3});
+        gsap.to(".project-description", {
+            fontSize: "1.3rem",
+            opacity: 1,
+            duration: 0.3,
+        });
+        gsap.to(".project-description-p", {
+            fontSize: "1.3rem",
+            opacity: 1,
+            duration: 0.3,
+        });
     }
 
     function transformBL() {
@@ -168,10 +205,17 @@ function Projects() {
         );
         gsap.to(".bottom-right", { height: 100, width: 100, duration: 0.3 });
         setProject(snakeDescription);
-        gsap.to(".project-description", {fontSize: "1.3rem", opacity: 1, duration: 0.3});
-        gsap.to(".project-description-p", {fontSize: "1.3rem", opacity: 1, duration: 0.3});
+        gsap.to(".project-description", {
+            fontSize: "1.3rem",
+            opacity: 1,
+            duration: 0.3,
+        });
+        gsap.to(".project-description-p", {
+            fontSize: "1.3rem",
+            opacity: 1,
+            duration: 0.3,
+        });
     }
-
     return (
         <div className="projects">
             <h1>My Work</h1>
@@ -201,6 +245,20 @@ function Projects() {
             <div className="project-description">
                 <h2>{project.header}</h2>
                 <p className="project-description-p">{project.text}</p>
+                <div className="made-with-icons">
+                    <Grid container columnGap={2}>
+                        {project.madeWith &&
+                            project.madeWith.map((item, index) => (
+                                <Grid item>
+                                    <img
+                                        src={`src/images/${item}.png`}
+                                        alt={item}
+                                        style={{ height: "50px" }}
+                                    />
+                                </Grid>
+                            ))}
+                    </Grid>
+                </div>
             </div>
         </div>
     );

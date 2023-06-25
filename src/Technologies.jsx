@@ -146,6 +146,7 @@ function Technologies() {
                             img="src\images\javascript.png"
                             text="JavaScript"
                             className="language javascript"
+                            height="125px"
                         />
                     </Grid>
                     <Grid item xs={4}>
@@ -153,6 +154,7 @@ function Technologies() {
                             img="src\images\react.png"
                             text="React.JS"
                             className="language react"
+                            height="125px"
                         />
                     </Grid>
                     <Grid item xs={4}>
@@ -160,6 +162,8 @@ function Technologies() {
                             img="src\images\node.png"
                             text="Node.JS / Express"
                             className="language node"
+                            height="125px"
+
                         />
                     </Grid>
                 </Grid>
@@ -169,6 +173,8 @@ function Technologies() {
                             img="src\images\MongoDB.png"
                             text="MongoDB"
                             className="language mongo"
+                            height="125px"
+
                         />
                     </Grid>
                     <Grid item xs={3}>
@@ -176,6 +182,8 @@ function Technologies() {
                             img="src\images\postgresql.png"
                             text="PostgreSQL"
                             className="language sqlite"
+                            height="125px"
+
                         />
                                             </Grid>
 
@@ -184,6 +192,8 @@ function Technologies() {
                             img="src\images\jquery.png"
                             text="jQuery"
                             className="language jquery"
+                            height="125px"
+
                         />
                     </Grid>
                     <Grid item xs={3}>
@@ -191,6 +201,8 @@ function Technologies() {
                             img="src\images\gsap.png"
                             text="GSAP"
                             className="language gsap"
+                            height="125px"
+
                         />
                     </Grid> 
                 </Grid>
@@ -200,6 +212,8 @@ function Technologies() {
                             img="src\images\MUI.png"
                             text="Material UI"
                             className="language mui"
+                            height="125px"
+
                         />
                     </Grid>
                     <Grid item xs={3}>
@@ -207,6 +221,8 @@ function Technologies() {
                             img="src\images\html.png"
                             text="HTML"
                             className="language html"
+                            height="125px"
+
                         />
                     </Grid>
                     <Grid item xs={3}>
@@ -214,6 +230,8 @@ function Technologies() {
                             img="src\images\css.png"
                             text="CSS"
                             className="language css"
+                            height="125px"
+
                         />
                     </Grid>
                     <Grid item xs={3}>
@@ -221,6 +239,8 @@ function Technologies() {
                             img="src\images\Bootstrap.png"
                             text="Bootstrap"
                             className="language bootstrap"
+                            height="125px"
+
                         />
                     </Grid>
                 </Grid>

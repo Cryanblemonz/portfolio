@@ -1,6 +1,9 @@
 body{
   padding: 0;
   margin: 0;
+  background-image: url(./images/background3.jpg);
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .full-stack{
@@ -72,7 +75,7 @@ h1{
   color: rgb(255, 255, 255);
   font-family: montserrat;
   text-align: center;
-  font-size: 4rem;
+  font-size: 2.7rem;
   margin-top: 0;
 }
 
@@ -86,10 +89,6 @@ h1{
   background-size: cover;
   margin: 0;
   padding-top: 25px;
-}
-
-.language-img{
-  height: 125px;
 }
 
 .language{
@@ -154,17 +153,27 @@ h1{
   opacity: 1;
   color: white;
   position: absolute; 
-  top: 100px;
+  top: 80px;
   width: 350px;
   padding: 5px 20px;
   left: 25px;
   text-align: left;
   line-height: 1.4;
-  font-size: 0;
+  font-size: 0; 
   opacity: 0;
 }
 
 .project-description h2{
   font-family: montserrat;
 }
+
+.made-with-icons{
+    background: white;
+    display: inline-block;
+    padding:  10px 10px 5px 5px;
+    border-radius: 6px;
+    margin: 10px auto;
+  text-align: center;
+  }
+
 
