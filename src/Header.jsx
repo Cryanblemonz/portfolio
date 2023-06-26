@@ -64,7 +64,7 @@ function Header() {
                     <Grid item xs={6}>
                         <img
                             className="headshot"
-                            src="src\images\headshot.png"></img>
+                            src="public\images\headshot.png"></img>
                     </Grid>
                 </Grid>
                 <div className="header-para">

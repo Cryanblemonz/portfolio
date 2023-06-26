@@ -1,7 +1,7 @@
 body{
   padding: 0;
   margin: 0;
-  background-image: url(./images/background3.jpg);
+  background-image: url(/public/images/background3.jpg);
   background-attachment: fixed;
   background-size: cover;
 }
@@ -16,7 +16,7 @@ body{
   overflow-y: hidden;
   overflow-x: hidden;
   perspective: 10px;
-  background-image: url(./images/background3.jpg);
+  background-image: url(/public/images/background3.jpg);
   background-attachment: fixed;
   background-size: cover;
   margin: 0;
@@ -84,7 +84,7 @@ h1{
   overflow-y: hidden;
   overflow-x: hidden;
   perspective: 10px;
-  background-image: url(./images/background3.jpg);
+  background-image: url(/public/images/background3.jpg);
   background-attachment: fixed;
   background-size: cover;
   margin: 0;
@@ -123,25 +123,25 @@ h1{
 
 .top-left{
   border-radius: 9999px 0 0 0;
-  background-image: url(./images/rescueroadgif.gif);
+  background-image: url(/public/images/rescueroadgif.gif);
   background-size: cover;
 }
 
 .top-right{ 
   border-radius: 0 9999px 0 0;
-  background-image: url(./images/gymgeniegif.gif);
+  background-image: url(/public/images/gymgeniegif.gif);
   background-size: cover;
 }
 
 .bottom-left{
   border-radius: 0 0  0 9999px;
-  background-image: url(./images/snake.gif);
+  background-image: url(/public/images/snake.gif);
   background-size: cover;
 }
 
 .bottom-right{
   border-radius: 0 0  9999px 0;
-  background-image: url(./images/fitness.png);
+  background-image: url(/public/images/fitness.png);
   background-size: cover;
 }
 

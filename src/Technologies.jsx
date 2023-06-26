@@ -146,7 +146,7 @@ function Technologies() {
                 <Grid container spacing={2}>
                     <Grid item xs={4}>
                         <Language
-                            img="src\images\javascript.png"
+                            img="public\images\javascript.png"
                             text="JavaScript"
                             className="language javascript"
                             height="95px"
@@ -154,7 +154,7 @@ function Technologies() {
                     </Grid>
                     <Grid item xs={4}>
                         <Language
-                            img="src\images\react.png"
+                            img="public\images\react.png"
                             text="React.JS"
                             className="language react"
                             height="95px"
@@ -162,7 +162,7 @@ function Technologies() {
                     </Grid>
                     <Grid item xs={4}>
                         <Language
-                            img="src\images\node.png"
+                            img="public\images\node.png"
                             text="Node.JS / Express"
                             className="language node"
                             height="95px"
@@ -173,7 +173,7 @@ function Technologies() {
                 <Grid container spacing={2} style={{ marginTop: "20px" }}>
                     <Grid item xs={3}>
                         <Language
-                            img="src\images\MongoDB.png"
+                            img="public\images\MongoDB.png"
                             text="MongoDB"
                             className="language mongo"
                             height="95px"
@@ -182,7 +182,7 @@ function Technologies() {
                     </Grid>
                     <Grid item xs={3}>
                         <Language
-                            img="src\images\postgresql.png"
+                            img="public\images\postgresql.png"
                             text="PostgreSQL"
                             className="language postgres"
                             height="95px"
@@ -192,7 +192,7 @@ function Technologies() {
 
                     <Grid item xs={3}>
                         <Language
-                            img="src\images\jquery.png"
+                            img="public\images\jquery.png"
                             text="jQuery"
                             className="language jquery"
                             height="95px"
@@ -201,7 +201,7 @@ function Technologies() {
                     </Grid>
                     <Grid item xs={3}>
                         <Language
-                            img="src\images\gsap.png"
+                            img="public\images\gsap.png"
                             text="GSAP"
                             className="language gsap"
                             height="95px"
@@ -212,7 +212,7 @@ function Technologies() {
                 <Grid container spacing={2} style={{ marginTop: "20px" }}>
                     <Grid item xs={3}>
                         <Language
-                            img="src\images\MUI.png"
+                            img="public\images\MUI.png"
                             text="Material UI"
                             className="language mui"
                             height="95px"
@@ -221,7 +221,7 @@ function Technologies() {
                     </Grid>
                     <Grid item xs={3}>
                         <Language
-                            img="src\images\html.png"
+                            img="public\images\html.png"
                             text="HTML"
                             className="language html"
                             height="95px"
@@ -230,7 +230,7 @@ function Technologies() {
                     </Grid>
                     <Grid item xs={3}>
                         <Language
-                            img="src\images\css.png"
+                            img="public\images\css.png"
                             text="CSS"
                             className="language css"
                             height="95px"
@@ -239,7 +239,7 @@ function Technologies() {
                     </Grid>
                     <Grid item xs={3}>
                         <Language
-                            img="src\images\Bootstrap.png"
+                            img="public\images\Bootstrap.png"
                             text="Bootstrap"
                             className="language bootstrap"
                             height="95px"
