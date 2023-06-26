@@ -19,7 +19,7 @@ function Technologies() {
             "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
             opacity: 1,
             y: 0,
-            duration: 1.2,
+            duration: 0.8,
             delay: 0.5,
         });
         tl1.to(
@@ -28,7 +28,7 @@ function Technologies() {
                 "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
                 opacity: 1,
                 y: 0,
-                duration: 1.2,
+                duration: 0.8,
             },
             "-=1"
         );
@@ -38,7 +38,7 @@ function Technologies() {
                 "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
                 opacity: 1,
                 y: 0,
-                duration: 1.2,
+                duration: 0.8,
             },
             "-=1"
         );
@@ -55,7 +55,7 @@ function Technologies() {
             "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
             opacity: 1,
             y: 0,
-            duration: 1.2,
+            duration: 0.8,
             delay: 0.8
 
         });
@@ -63,7 +63,7 @@ function Technologies() {
             "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
             opacity: 1,
             y: 0,
-            duration: 1.2,
+            duration: 0.8,
         },
         "-=1");
         tl2.to(
@@ -72,7 +72,7 @@ function Technologies() {
                 "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
                 opacity: 1,
                 y: 0,
-                duration: 1.2,
+                duration: 0.8,
             },
             "-=1"
         );
@@ -82,7 +82,7 @@ function Technologies() {
                 "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
                 opacity: 1,
                 y: 0,
-                duration: 1.2,
+                duration: 0.8,
             },
             "-=1"
         );
@@ -103,8 +103,8 @@ function Technologies() {
                 "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
                 opacity: 1,
                 y: 0,
-                duration: 1.2,
-                delay: 1.2
+                duration: 0.8,
+                delay: 0.8
             },
         );
         tl3.to(
@@ -113,7 +113,7 @@ function Technologies() {
                 "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
                 opacity: 1,
                 y: 0,
-                duration: 1.2,
+                duration: 0.8,
             },
             "-=1"
         );
@@ -123,7 +123,7 @@ function Technologies() {
                 "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
                 opacity: 1,
                 y: 0,
-                duration: 1.2,
+                duration: 0.8,
             },
             "-=1"
         );
@@ -133,7 +133,7 @@ function Technologies() {
                     "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
                     opacity: 1,
                     y: 0,
-                    duration: 1.2,
+                    duration: 0.8,
                 },
                 "-=1"
             );

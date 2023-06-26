@@ -179,21 +179,20 @@ h1{
 .contact{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-  height: 90vh;
-  margin: 50px auto;
+  grid-template-rows: repeat(8, 1fr);
+  height: 100vh;
+  margin: 0 auto 100px auto;;
   width: 80vw;
 }
 
 
 .contact h1{
   width: 30%;
-  margin: 10px auto;
+  margin: 0 auto;
   padding: 20px;
   border-radius: 25px;
-  margin-top: 50px;
   grid-column: 1 / 13;
-  grid-row: 1 / 2;
+  grid-row: 1 / 1;
 }
 
 .want-to-box{
@@ -204,7 +203,7 @@ h1{
   line-height: 1.7;
   position: relative;
   grid-column: 1 / 5;
-  grid-row: 3 / 8;
+  grid-row: 2 / 8;
   height: 300px;
   width: 400px;
 }
@@ -216,10 +215,10 @@ h1{
 }
 
 .chess-img{
-  width: 100px;
+  width: 140px;
   position: absolute;
-  right: 90px;
-  bottom: 20px;
+  right: 20px;
+  bottom: -50px;
 }
 
 .contact-form{
@@ -230,15 +229,30 @@ h1{
   font-size: 2rem;  
   line-height: 1.7;
   position: relative;
-  grid-column: 8 / 13;
-  grid-row: 3 / 8;
+  grid-column: 6 / 11;
+  grid-row: 2 / 8;
   height: 300px;
   width: 500px;
   padding: 20px 20px 40px 40px;
-
+  text-align: center;
 }
 
 .MuiInputBase-root {
   background: white;
   opacity: 0.5;
+}
+
+label:focus{
+  color: white!important;
+}
+
+.contact-element{
+  opacity: 0;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  transform: translateY(-100px);
+}
+
+.fab-button{
+  transform: translateX(1000px) rotate(350deg);
+
 }
