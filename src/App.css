@@ -176,44 +176,69 @@ h1{
   text-align: center;
   }
 
+.contact{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  height: 90vh;
+  margin: 50px auto;
+  width: 80vw;
+}
+
+
 .contact h1{
-  background: rgb(228,246,255);
-  background: linear-gradient(197deg, rgba(228,246,255,1) 0%, rgba(0,0,0,1) 50%);
   width: 30%;
   margin: 10px auto;
   padding: 20px;
   border-radius: 25px;
   margin-top: 50px;
+  grid-column: 1 / 13;
+  grid-row: 1 / 2;
 }
 
-.contact p{
+.want-to-box{
   color: white;
-  background: rgb(228,246,255);
-  background: linear-gradient(197deg, rgba(228,246,255,1) 0%, rgba(0,0,0,1) 50%);
-  width: 30%;
-  margin: 50px auto 50px 10%;
-  padding: 20px;
+  padding: 20px 20px 40px 40px;
   border-radius: 25px;
   font-size: 2rem;  
   line-height: 1.7;
   position: relative;
+  grid-column: 1 / 5;
+  grid-row: 3 / 8;
+  height: 300px;
+  width: 400px;
 }
 
-.chess-piece{
-  writing-mode: vertical-lr;
-  font-size: 3rem;
-  transform: rotate(30deg);
-  position: relative;
-  bottom: 24px; 
-  right: 10px;
-  margin: 0;
-  padding: 0;
-  height: 20px;
+.contact h3{
+  margin: 0 0 10px 10px;
+  font-size: 2.8rem;
+  font-family: montserrat;
 }
 
 .chess-img{
   width: 100px;
   position: absolute;
   right: 90px;
-  bottom: 10px;
+  bottom: 20px;
+}
+
+.contact-form{
+  color: white;
+  width: 30%;
+  padding: 40px;
+  border-radius: 25px;
+  font-size: 2rem;  
+  line-height: 1.7;
+  position: relative;
+  grid-column: 8 / 13;
+  grid-row: 3 / 8;
+  height: 300px;
+  width: 500px;
+  padding: 20px 20px 40px 40px;
+
+}
+
+.MuiInputBase-root {
+  background: white;
+  opacity: 0.5;
 }

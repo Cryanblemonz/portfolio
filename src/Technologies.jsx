@@ -105,7 +105,6 @@ function Technologies() {
                 y: 0,
                 duration: 1.2,
                 delay: 1.2
-
             },
         );
         tl3.to(
