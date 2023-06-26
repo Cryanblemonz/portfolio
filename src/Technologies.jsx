@@ -56,8 +56,16 @@ function Technologies() {
             opacity: 1,
             y: 0,
             duration: 1.2,
-            delay: 0.5,
+            delay: 0.8
+
         });
+        tl2.to(".postgres", {
+            "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+        },
+        "-=1");
         tl2.to(
             ".jquery",
             {
@@ -69,6 +77,38 @@ function Technologies() {
             "-=1"
         );
         tl2.to(
+            ".gsap",
+            {
+                "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+                opacity: 1,
+                y: 0,
+                duration: 1.2,
+            },
+            "-=1"
+        );
+
+    }, []);
+    useEffect(() => {
+        gsap.utils.checkPrefix("transform");
+        let tl3 = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".mui",
+                start: "top bottom",
+            },
+        });
+
+        tl3.to(
+            ".mui",
+            {
+                "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+                opacity: 1,
+                y: 0,
+                duration: 1.2,
+                delay: 1.2
+
+            },
+        );
+        tl3.to(
             ".html",
             {
                 "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
@@ -78,44 +118,8 @@ function Technologies() {
             },
             "-=1"
         );
-        tl2.to(
-                ".css",
-                {
-                    "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-                    opacity: 1,
-                    y: 0,
-                    duration: 1.2,
-                },
-                "-=1"
-            );
-    }, []);
-    useEffect(() => {
-        gsap.utils.checkPrefix("transform");
-        let tl3 = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".sqlite",
-                start: "top bottom",
-            },
-        });
-        tl3.to(".sqlite", {
-            "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-            opacity: 1,
-            y: 0,
-            duration: 1.2,
-            delay: .5,
-        });
         tl3.to(
-            ".mui",
-            {
-                "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-                opacity: 1,
-                y: 0,
-                duration: 1.2,
-            },
-            "-=1"
-        );
-        tl3.to(
-            ".gsap",
+            ".css",
             {
                 "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
                 opacity: 1,
@@ -146,7 +150,7 @@ function Technologies() {
                             img="src\images\javascript.png"
                             text="JavaScript"
                             className="language javascript"
-                            height="125px"
+                            height="95px"
                         />
                     </Grid>
                     <Grid item xs={4}>
@@ -154,7 +158,7 @@ function Technologies() {
                             img="src\images\react.png"
                             text="React.JS"
                             className="language react"
-                            height="125px"
+                            height="95px"
                         />
                     </Grid>
                     <Grid item xs={4}>
@@ -162,7 +166,7 @@ function Technologies() {
                             img="src\images\node.png"
                             text="Node.JS / Express"
                             className="language node"
-                            height="125px"
+                            height="95px"
 
                         />
                     </Grid>
@@ -173,7 +177,7 @@ function Technologies() {
                             img="src\images\MongoDB.png"
                             text="MongoDB"
                             className="language mongo"
-                            height="125px"
+                            height="95px"
 
                         />
                     </Grid>
@@ -181,8 +185,8 @@ function Technologies() {
                         <Language
                             img="src\images\postgresql.png"
                             text="PostgreSQL"
-                            className="language sqlite"
-                            height="125px"
+                            className="language postgres"
+                            height="95px"
 
                         />
                                             </Grid>
@@ -192,7 +196,7 @@ function Technologies() {
                             img="src\images\jquery.png"
                             text="jQuery"
                             className="language jquery"
-                            height="125px"
+                            height="95px"
 
                         />
                     </Grid>
@@ -201,7 +205,7 @@ function Technologies() {
                             img="src\images\gsap.png"
                             text="GSAP"
                             className="language gsap"
-                            height="125px"
+                            height="95px"
 
                         />
                     </Grid> 
@@ -212,7 +216,7 @@ function Technologies() {
                             img="src\images\MUI.png"
                             text="Material UI"
                             className="language mui"
-                            height="125px"
+                            height="95px"
 
                         />
                     </Grid>
@@ -221,7 +225,7 @@ function Technologies() {
                             img="src\images\html.png"
                             text="HTML"
                             className="language html"
-                            height="125px"
+                            height="95px"
 
                         />
                     </Grid>
@@ -230,7 +234,7 @@ function Technologies() {
                             img="src\images\css.png"
                             text="CSS"
                             className="language css"
-                            height="125px"
+                            height="95px"
 
                         />
                     </Grid>
@@ -239,7 +243,7 @@ function Technologies() {
                             img="src\images\Bootstrap.png"
                             text="Bootstrap"
                             className="language bootstrap"
-                            height="125px"
+                            height="95px"
 
                         />
                     </Grid>

@@ -12,7 +12,7 @@ function App() {
       <Header />
       <Technologies />
       <Projects />
-      {/* <Contact /> */}
+      <Contact />
     </div>
   )
 }

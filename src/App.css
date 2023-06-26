@@ -176,4 +176,44 @@ h1{
   text-align: center;
   }
 
+.contact h1{
+  background: rgb(228,246,255);
+  background: linear-gradient(197deg, rgba(228,246,255,1) 0%, rgba(0,0,0,1) 50%);
+  width: 30%;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 25px;
+  margin-top: 50px;
+}
 
+.contact p{
+  color: white;
+  background: rgb(228,246,255);
+  background: linear-gradient(197deg, rgba(228,246,255,1) 0%, rgba(0,0,0,1) 50%);
+  width: 30%;
+  margin: 50px auto 50px 10%;
+  padding: 20px;
+  border-radius: 25px;
+  font-size: 2rem;  
+  line-height: 1.7;
+  position: relative;
+}
+
+.chess-piece{
+  writing-mode: vertical-lr;
+  font-size: 3rem;
+  transform: rotate(30deg);
+  position: relative;
+  bottom: 24px; 
+  right: 10px;
+  margin: 0;
+  padding: 0;
+  height: 20px;
+}
+
+.chess-img{
+  width: 100px;
+  position: absolute;
+  right: 90px;
+  bottom: 10px;
+}
