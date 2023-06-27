@@ -20,7 +20,7 @@ app.post("/send", (req, res) => {
         <p>You have a new contact request</p>
         <h3>Contact Details</h3>
         <ul>
-        <li>Name: ${req.body.name}</li>
+        <li>Name: ${req.body.contactName}</li>
         <li>Email: ${req.body.email}</li>
         <li>Message: ${req.body.message}</li>
         </ul>
