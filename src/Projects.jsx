@@ -251,7 +251,7 @@ function Projects() {
                             project.madeWith.map((item, index) => (
                                 <Grid item>
                                     <img
-                                        src={`src/images/${item}.png`}
+                                        src={`public/images/${item}.png`}
                                         alt={item}
                                         style={{ height: "50px" }}
                                     />

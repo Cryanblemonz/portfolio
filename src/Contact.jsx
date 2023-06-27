@@ -7,16 +7,34 @@ gsap.registerPlugin(ScrollTrigger);
 import TextField from "@mui/material/TextField";
 import Fab from "@mui/material/Fab";
 import SendIcon from "@mui/icons-material/Send";
+import axios from "axios";
 
 const rootStyles = {
     border: "1px solid #001d3d",
     color: "white",
 };
 
+
+
+
+
 function Contact() {
-        
+        const [contactName, setContactName] = useState("");
+        const [email, setEmail] = useState("");
+        const [message, setMessage] = useState("");
 
-
+        async function send(event){
+                event.preventDefault();
+                try {
+                   const response = await axios.post("/send", {
+                      contactName, email, message
+                   });
+                   console.log(response);
+                } catch(error){
+                   console.error("Error sending message", error)
+                }
+             }
+             
 
     useEffect(() => {
         gsap.utils.checkPrefix("transform");
@@ -29,39 +47,39 @@ function Contact() {
         tl.to(".want-to", {
             "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
             opacity: 1,
-            y: 0,
+           x: 0,
             duration: 1.2,
         });
         tl.to(".hire", {
             "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
             opacity: 1,
-            y: 0,
+           x: 0,
             duration: 1.2,
         });
         tl.to(".help", {
             "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
             opacity: 1,
-            y: 0,
+           x: 0,
             duration: 1.2,
         });
         tl.to(".consult", {
             "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
             opacity: 1,
-            y: 0,
+           x: 0,
             duration: 1.2,
         });
         tl.to(".chess", {
             "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
             opacity: 1,
-            y: 0,
+            x: 0,
             duration: 1.2,
         });
         tl.to(".chess-img", {
             "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
             opacity: 1,
-            y: 0,
+           x: 0,
             duration: 1.2,
-        }, "-=.5");
+        }, "-=1.2");
         tl.to(".inputs", {
             "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
             opacity: 1,
@@ -93,11 +111,11 @@ function Contact() {
                     <li className="chess contact-element">Play chess?</li>
                     <img
                         className="chess-img contact-element"
-                        src="src\images\chess.gif"></img>
+                        src="public\images\chess.gif"></img>
                 </ul>
             </div>
-            <form className="contact-form">
-                <div className="inputs contact-element">
+            <form className="contact-form" onSubmit={send}>
+                <div className="inputs">
                 <h3>Send me a message!</h3>
                 <TextField
                     variant="outlined"
@@ -105,6 +123,7 @@ function Contact() {
                     onClick={showFab}
                     fullWidth
                     size="medium"
+                    onChange={(event)=>{setContactName(event.target.value); console.log(contactName)}}
                     InputLabelProps={{
                         sx: {
                             color: "white",
@@ -114,6 +133,7 @@ function Contact() {
                     type="text"
                     variant="outlined"
                     label="Your Email"
+                    onChange={(event)=>{setEmail(event.target.value); console.log(email)}}
                     fullWidth
                     margin="dense"
                     size="medium"
@@ -127,6 +147,7 @@ function Contact() {
                     type="text"
                     variant="outlined"
                     label="Message"
+                    onChange={(event)=>{setMessage(event.target.value); console.log(message)}}
                     fullWidth
                     multiline
                     rows="5"
@@ -140,7 +161,7 @@ function Contact() {
                     }}></TextField>
                 </div>
                 
-                    <Fab variant="extended" className="fab-button">
+                    <Fab variant="extended" className="fab-button" type="submit">
                         <SendIcon /> &nbsp;Send
                     </Fab>
             </form>

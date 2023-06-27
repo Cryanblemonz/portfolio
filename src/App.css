@@ -188,7 +188,7 @@ h1{
 
 .contact h1{
   width: 30%;
-  margin: 0 auto;
+  margin: 50px auto 0 auto;
   padding: 20px;
   border-radius: 25px;
   grid-column: 1 / 13;
@@ -249,10 +249,19 @@ label:focus{
 .contact-element{
   opacity: 0;
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  transform: translateX(-100px);
+}
+
+.inputs{
+  opacity: 0;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
   transform: translateY(-100px);
 }
 
 .fab-button{
   transform: translateX(1000px) rotate(350deg);
+}
 
+.chess-img{
+  clip-path: polygon(0 100%, 100% 100%, 0% 100%, 0% 100%);
 }

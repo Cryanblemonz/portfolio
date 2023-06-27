@@ -12,16 +12,16 @@ function Technologies() {
             scrollTrigger: {
                 trigger: ".javascript",
                 start: "top bottom",
-                delay: 0.2,
             },
         });
-        tl1.to(".javascript", {
-            "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            delay: 0.5,
-        });
+        tl1.to(
+            ".javascript",
+            {
+                "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+            });
         tl1.to(
             ".react",
             {
@@ -29,115 +29,99 @@ function Technologies() {
                 opacity: 1,
                 y: 0,
                 duration: 0.8,
-            },
-            "-=1"
-        );
+                delay: 0.2
+            }, "-=0.8");
         tl1.to(
             ".node",
+            {       
+                "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                delay: 0.2
+
+            }, "-=0.8");
+        tl1.to(
+            ".mongo",
             {
                 "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
                 opacity: 1,
                 y: 0,
                 duration: 0.8,
-            },
-            "-=1"
-        );
-    }, []);
-    useEffect(() => {
-        gsap.utils.checkPrefix("transform");
-        let tl2 = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".mongo",
-                start: "top bottom",
-            },
-        });
-        tl2.to(".mongo", {
+                delay: 0.2
+
+            }, "-=0.8");
+        tl1.to(".postgres", {
             "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
             opacity: 1,
             y: 0,
             duration: 0.8,
-            delay: 0.8
-
-        });
-        tl2.to(".postgres", {
+            delay: 0.2
+        }, "-=0.8");
+        tl1.to(".jquery", {
             "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
             opacity: 1,
             y: 0,
             duration: 0.8,
-        },
-        "-=1");
-        tl2.to(
-            ".jquery",
-            {
-                "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-                opacity: 1,
-                y: 0,
-                duration: 0.8,
-            },
-            "-=1"
-        );
-        tl2.to(
-            ".gsap",
-            {
-                "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-                opacity: 1,
-                y: 0,
-                duration: 0.8,
-            },
-            "-=1"
-        );
+            delay: 0.2
+        }, "-=0.8");
+        tl1.to(".gsap", {
+            "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            delay: 0.2
+        }, "-=0.8");
+        tl1.to(".mui", {
+            "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            delay: 0.2
+        }, "-=0.8");
+        tl1.to(".html", {
+            "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            delay: 0.2
+        }, "-=0.8");
+        tl1.to(".css", {
+            "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            delay: 0.2
+        }, "-=0.8");
+        tl1.to(".bootstrap", {
+            "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            delay: 0.2
 
+        }, "-=0.8");
     }, []);
-    useEffect(() => {
-        gsap.utils.checkPrefix("transform");
-        let tl3 = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".mui",
-                start: "top bottom",
-            },
-        });
+    // useEffect(() => {
+    //     gsap.utils.checkPrefix("transform");
+    //     let tl2 = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: ".mongo",
+    //             start: "top bottom",
+    //         },
+    //     }, "-=0.8");
 
-        tl3.to(
-            ".mui",
-            {
-                "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-                opacity: 1,
-                y: 0,
-                duration: 0.8,
-                delay: 0.8
-            },
-        );
-        tl3.to(
-            ".html",
-            {
-                "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-                opacity: 1,
-                y: 0,
-                duration: 0.8,
-            },
-            "-=1"
-        );
-        tl3.to(
-            ".css",
-            {
-                "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-                opacity: 1,
-                y: 0,
-                duration: 0.8,
-            },
-            "-=1"
-        );
-        tl3.to(
-                ".bootstrap",
-                {
-                    "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-                    opacity: 1,
-                    y: 0,
-                    duration: 0.8,
-                },
-                "-=1"
-            );
-    }, []);
+    // }, []);
+    // useEffect(() => {
+    //     gsap.utils.checkPrefix("transform");
+    //     let tl3 = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: ".mui",
+    //             start: "top bottom",
+    //         },
+    //     }, "-=0.8");
+
+    // }, []);
 
     return (
         <div className="technologies">
@@ -166,7 +150,6 @@ function Technologies() {
                             text="Node.JS / Express"
                             className="language node"
                             height="95px"
-
                         />
                     </Grid>
                 </Grid>
@@ -177,7 +160,6 @@ function Technologies() {
                             text="MongoDB"
                             className="language mongo"
                             height="95px"
-
                         />
                     </Grid>
                     <Grid item xs={3}>
@@ -186,9 +168,8 @@ function Technologies() {
                             text="PostgreSQL"
                             className="language postgres"
                             height="95px"
-
                         />
-                                            </Grid>
+                    </Grid>
 
                     <Grid item xs={3}>
                         <Language
@@ -196,7 +177,6 @@ function Technologies() {
                             text="jQuery"
                             className="language jquery"
                             height="95px"
-
                         />
                     </Grid>
                     <Grid item xs={3}>
@@ -205,9 +185,8 @@ function Technologies() {
                             text="GSAP"
                             className="language gsap"
                             height="95px"
-
                         />
-                    </Grid> 
+                    </Grid>
                 </Grid>
                 <Grid container spacing={2} style={{ marginTop: "20px" }}>
                     <Grid item xs={3}>
@@ -216,7 +195,6 @@ function Technologies() {
                             text="Material UI"
                             className="language mui"
                             height="95px"
-
                         />
                     </Grid>
                     <Grid item xs={3}>
@@ -225,7 +203,6 @@ function Technologies() {
                             text="HTML"
                             className="language html"
                             height="95px"
-
                         />
                     </Grid>
                     <Grid item xs={3}>
@@ -234,7 +211,6 @@ function Technologies() {
                             text="CSS"
                             className="language css"
                             height="95px"
-
                         />
                     </Grid>
                     <Grid item xs={3}>
@@ -243,7 +219,6 @@ function Technologies() {
                             text="Bootstrap"
                             className="language bootstrap"
                             height="95px"
-
                         />
                     </Grid>
                 </Grid>
