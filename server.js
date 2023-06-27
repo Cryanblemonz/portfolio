@@ -21,7 +21,9 @@ app.post("/send", (req, res) => {
         <h3>Contact Details</h3>
         <ul>
         <li>Name: ${req.body.contactName}</li>
+        <br>
         <li>Email: ${req.body.email}</li>
+        <br>
         <li>Message: ${req.body.message}</li>
         </ul>
       `;
@@ -46,24 +48,15 @@ app.post("/send", (req, res) => {
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            return console.log(error);
+            console.log(error)
+            return res.sendStatus(500);
         }
         console.log("Message sent: %s", info.messageId);
         console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 
-        res.render("contact", { msg: "Email has been sent" });
+        res.sendStatus(200);
     });
 });
-
-
-app.get("/test", (req, res) =>{
-        if(process.env.email){
-                console.log(process.env.email);
-                console.log(process.env.pw);
-        } else {
-                console.log("error")
-        }
-})
 
 const port = 3000;
 

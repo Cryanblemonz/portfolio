@@ -8,64 +8,86 @@ import TextField from "@mui/material/TextField";
 import Fab from "@mui/material/Fab";
 import SendIcon from "@mui/icons-material/Send";
 import axios from "axios";
+import ReplayIcon from "@mui/icons-material/Replay";
 
 const rootStyles = {
     border: "1px solid #001d3d",
     color: "white",
 };
 
-
-
-
-
 function Contact() {
-        const [contactName, setContactName] = useState("");
-        const [email, setEmail] = useState("");
-        const [message, setMessage] = useState("");
+    const [contactName, setContactName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+    const [isSent, setIsSent] = useState(false);
 
-        async function send(event){
-                event.preventDefault();
-                try {
-                   const response = await axios.post("/send", {
-                      contactName, email, message
-                   });
-                   console.log(response);
-                } catch(error){
-                   console.error("Error sending message", error)
-                }
-             }
-             
+    async function send() {
+        try {
+          const response = await axios.post("/send", {
+            contactName,
+            email,
+            message,
+          });
+          setIsSent(true);
+        } catch (error) {
+          console.error("Error sending message", error);
+        }
+      }
+
+    function transformForm() {
+        gsap.to(".inputs", {
+            opacity: 0,
+            y: -100,
+            "clip-path": "polygon(0 100%, 100% 100%, 0% 100%, 0% 100%)",
+            duration: 1,
+        });
+    }
+    function openSentMessage(){
+        gsap.to(".message-sent-div", { 
+                "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+                opacity: 1,
+                x: 0,
+                duration: 1.2,
+})
+    }
+
+    useEffect(() => {
+        if (isSent) {
+          openSentMessage();
+        }
+      }, [isSent]);
+      
 
     useEffect(() => {
         gsap.utils.checkPrefix("transform");
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".want-to",
-                start: "top bottom",
+                start: "top center",
             },
         });
         tl.to(".want-to", {
             "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
             opacity: 1,
-           x: 0,
+            x: 0,
             duration: 1.2,
         });
         tl.to(".hire", {
             "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
             opacity: 1,
-           x: 0,
+            x: 0,
             duration: 1.2,
         });
         tl.to(".help", {
             "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
             opacity: 1,
-           x: 0,
+            x: 0,
             duration: 1.2,
         });
         tl.to(".consult", {
             "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
             opacity: 1,
-           x: 0,
+            x: 0,
             duration: 1.2,
         });
         tl.to(".chess", {
@@ -74,12 +96,16 @@ function Contact() {
             x: 0,
             duration: 1.2,
         });
-        tl.to(".chess-img", {
-            "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-            opacity: 1,
-           x: 0,
-            duration: 1.2,
-        }, "-=1.2");
+        tl.to(
+            ".chess-img",
+            {
+                "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+                opacity: 1,
+                x: 0,
+                duration: 1.2,
+            },
+            "-=1.2"
+        );
         tl.to(".inputs", {
             "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
             opacity: 1,
@@ -88,13 +114,13 @@ function Contact() {
         });
     }, []);
 
-    function showFab(){
+    function showFab() {
         gsap.to(".fab-button", {
-                x: 0,
-                rotate: -1080,
-                duration: 1,
-                ease: "power2.out"
-        })
+            x: 0,
+            rotate: -1080,
+            duration: 1,
+            ease: "power2.out",
+        });
     }
 
     return (
@@ -114,57 +140,79 @@ function Contact() {
                         src="public\images\chess.gif"></img>
                 </ul>
             </div>
-            <form className="contact-form" onSubmit={send}>
-                <div className="inputs">
-                <h3>Send me a message!</h3>
-                <TextField
-                    variant="outlined"
-                    label="Name"
-                    onClick={showFab}
-                    fullWidth
-                    size="medium"
-                    onChange={(event)=>{setContactName(event.target.value); console.log(contactName)}}
-                    InputLabelProps={{
-                        sx: {
-                            color: "white",
-                        },
-                    }}></TextField>
-                <TextField
-                    type="text"
-                    variant="outlined"
-                    label="Your Email"
-                    onChange={(event)=>{setEmail(event.target.value); console.log(email)}}
-                    fullWidth
-                    margin="dense"
-                    size="medium"
-                    sx={{ ...rootStyles }}
-                    InputLabelProps={{
-                        sx: {
-                            color: "white",
-                        },
-                    }}></TextField>
-                <TextField
-                    type="text"
-                    variant="outlined"
-                    label="Message"
-                    onChange={(event)=>{setMessage(event.target.value); console.log(message)}}
-                    fullWidth
-                    multiline
-                    rows="5"
-                    margin="dense"
-                    size="medium"
-                    className="textfield-input"
-                    InputLabelProps={{
-                        sx: {
-                            color: "white",
-                        },
-                    }}></TextField>
-                </div>
-                
-                    <Fab variant="extended" className="fab-button" type="submit">
+            {!isSent ? (
+                <form className="contact-form" onSubmit={ (event) => {
+                        event.preventDefault();
+                        transformForm();
+                        send();
+                      }}>
+                    <div className="inputs">
+                        <h3>Send me a message!</h3>
+                        <TextField
+                            variant="outlined"
+                            label="Name"
+                            onClick={showFab}
+                            fullWidth
+                            size="medium"
+                            onChange={(event) => {
+                                setContactName(event.target.value);
+                                console.log(contactName);
+                            }}
+                            InputLabelProps={{
+                                sx: {
+                                    color: "white",
+                                },
+                            }}></TextField>
+                        <TextField
+                            type="text"
+                            variant="outlined"
+                            label="Your Email"
+                            onChange={(event) => {
+                                setEmail(event.target.value);
+                                console.log(email);
+                            }}
+                            fullWidth
+                            margin="dense"
+                            size="medium"
+                            sx={{ ...rootStyles }}
+                            InputLabelProps={{
+                                sx: {
+                                    color: "white",
+                                },
+                            }}></TextField>
+                        <TextField
+                            type="text"
+                            variant="outlined"
+                            label="Message"
+                            onChange={(event) => {
+                                setMessage(event.target.value);
+                                console.log(message);
+                            }}
+                            fullWidth
+                            multiline
+                            rows="5"
+                            margin="dense"
+                            size="medium"
+                            className="textfield-input"
+                            InputLabelProps={{
+                                sx: {
+                                    color: "white",
+                                },
+                            }}></TextField>
+                    </div>
+
+                    <Fab
+                        variant="extended"
+                        className="fab-button"
+                        type="submit">
                         <SendIcon /> &nbsp;Send
                     </Fab>
-            </form>
+                </form>
+            ) : (
+                <div className="message-sent-div">
+                    <h3>Message Sent! </h3>
+                </div>
+            )}
         </div>
     );
 }
