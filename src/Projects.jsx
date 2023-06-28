@@ -1,10 +1,23 @@
 import { useState } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Language from "./Language";
 import { useEffect } from "react";
-gsap.registerPlugin(ScrollTrigger);
 import Grid from "@mui/material/Grid";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { createTheme, ThemeProvider } from "@mui/material";
+
+const theme = createTheme({
+    breakpoints: {
+        values: {
+            xs: 0,
+            sm: 600,
+            md: 1000,
+            lg: 1200,
+            xl: 1536,
+        },
+    },
+});
+
 
 let rescueRoadDescription = {
     header: "Rescue Road",
@@ -32,8 +45,10 @@ let fitnessDescription = {
 
 function Projects() {
     const [project, setProject] = useState({});
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
     function unTransform() {
+        gsap.to(".grid", {x: 0, y: 0, duration: 0.3})
         gsap.to(".top-left", {
             x: 0,
             y: 0,
@@ -149,9 +164,8 @@ function Projects() {
         });
         gsap.to(".top-right", { height: 100, width: 100, duration: 0.3 });
         gsap.to(".bottom-right", {
-            y: -300,
-            height: 400,
-            width: 800,
+            height: 300,
+            width: 600,
             duration: 0.3,
         });
         gsap.to(
@@ -160,7 +174,6 @@ function Projects() {
             "-=2"
         );
         gsap.to(".bottom-left", {
-            y: -300,
             height: 100,
             width: 100,
             duration: 0.3,
@@ -176,6 +189,7 @@ function Projects() {
             opacity: 1,
             duration: 0.3,
         });
+
     }
 
     function transformBL() {
@@ -187,13 +201,11 @@ function Projects() {
         });
         gsap.to(".top-right", { height: 100, width: 100, duration: 0.3 });
         gsap.to(".bottom-right", {
-            y: -300,
             height: 100,
             width: 100,
             duration: 0.3,
         });
         gsap.to(".bottom-left", {
-            y: -300,
             height: 400,
             width: 700,
             duration: 0.3,
@@ -225,22 +237,22 @@ function Projects() {
                     className="project top-left"
                     onMouseEnter={transformTL}
                     onMouseLeave={unTransform}
-                    style={{ height: "250px", width: "250px" }}></div>
+                    ></div>
                 <div
                     className="project top-right"
                     onMouseEnter={transformTR}
                     onMouseLeave={unTransform}
-                    style={{ height: "250px", width: "250px" }}></div>
+                    ></div>
                 <div
                     className="project bottom-left"
                     onMouseEnter={transformBL}
                     onMouseLeave={unTransform}
-                    style={{ height: "250px", width: "250px" }}></div>
+                    ></div>
                 <div
                     className="project bottom-right"
                     onMouseEnter={transformBR}
                     onMouseLeave={unTransform}
-                    style={{ height: "250px", width: "250px" }}></div>
+                    ></div>
             </div>
             <div className="project-description">
                 <h2>{project.header}</h2>
