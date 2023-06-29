@@ -266,7 +266,17 @@ label:focus {
     transform: translateX(1000px) rotate(350deg);
 }
 
+@media(min-width: 1200px){
+  .project-description{
+    position: absolute;
+    top: 100px;
+    right: 25px;
+    width: 25vw;
+  }
+}
+
 @media (max-width: 900px) {
+  
     .headshot {
         width: 80%;
         display: block;
