@@ -28,39 +28,39 @@ let fitnessDescription = {
     madeWith: ["javascript", "html", "css"],
 };
 
-function MobileProjects() {
+function MediumProjects() {
     const [project, setProject] = useState({});
 
     function unTransform() {
         gsap.to(".top-left", {
             x: 0,
             y: 0,
-            height: "45vw",
-            width: "45vw",
+            width: "35vw",
+            height: "35vw",
             duration: 0.3,
             borderRadius: "9999 0 0 0",
         });
         gsap.to(".top-right", {
             x: 0,
             y: 0,
-            height: "45vw",
-            width: "45vw",
+            width: "35vw",
+            height: "35vw",
             duration: 0.3,
             borderRadius: "0 9999 0 0",
         });
         gsap.to(".bottom-right", {
             x: 0,
             y: 0,
-            height: "45vw",
-            width: "45vw",
+            width: "35vw",
+            height: "35vw",
             duration: 0.3,
             borderRadius: "0 0 9999 0",
         });
         gsap.to(".bottom-left", {
             x: 0,
             y: 0,
-            height: "45vw",
-            width: "45vw",
+            width: "35vw",
+            height: "35vw",
             duration: 0.3,
             borderRadius: "0 0 0 9999 ",
         });
@@ -74,7 +74,7 @@ function MobileProjects() {
             opacity: 0,
             duration: 0.3,
         });
-        gsap.to(".grid", { height: "91vw", y: 0, x: 0, duration: 0.3 });
+        gsap.to(".grid", { height: "71.5vw", y: 0, x: 0, duration: 0.3 });
     }
 
     async function transformTL() {
@@ -83,25 +83,25 @@ function MobileProjects() {
             { borderRadius: "25 0 0 0", duration: 0.6 },
             "-=1"
         );
-        gsap.to(".top-left", { height: "65vw", width: "65vw", duration: 0.3 });
+        gsap.to(".top-left", { height: "48vw", width: "48vw", duration: 0.3 });
 
         gsap.to(".top-right", {
-            x: "-1vw",
-            y: "55vw",
+            x: ".5vw",
+            y: "38vw",
             height: "10vw",
             width: "10vw",
             duration: 0.3,
         });
         gsap.to(".bottom-right", {
-            x: "-1vw",
-            y: "-1vw",
+            x: ".5vw",
+            y: ".5vw",
             height: "10vw",
             width: "10vw",
             duration: 0.3,
         });
         gsap.to(".bottom-left", {
-            y: "-1vw",
-            x: "55vw",
+            y: ".5vw",
+            x: "38vw",
             height: "10vw",
             width: "10vw",
             duration: 0.3,
@@ -117,34 +117,31 @@ function MobileProjects() {
             opacity: 1,
             duration: 0.3,
         });
-        gsap.to(".grid", { height: "80vw", x: "10vw", duration: 0.3 });
+        gsap.to(".grid", { height: "61.5vw", x: "12vw", duration: 0.3 });
     }
 
     function transformTR() {
         gsap.to(".top-left", {
-            x: "1vw",
-            y: "40vw",
+            y: "33vw",
             height: "10vw",
             width: "10vw",
             duration: 0.3,
         });
-        gsap.to(".top-right", { height: "50vw", width: "95vw", duration: 0.3 });
+        gsap.to(".top-right", { height: "43vw", width: "80vw", duration: 0.3 });
         gsap.to(
             ".top-right",
             { borderRadius: "0 25 0 0", duration: 0.3 },
             "-=2"
         );
         gsap.to(".bottom-right", {
-            y: "-1vw",
+            y: ".5vw",
             height: "10vw",
             width: "10vw",
             duration: 0.3,
         });
         gsap.to(".bottom-left", {
-            x: "1vw",
             height: "10vw",
             width: "10vw",
-            y: "-1vw",
             duration: 0.3,
         });
         setProject(gymGenieDescription);
@@ -158,26 +155,25 @@ function MobileProjects() {
             opacity: 1,
             duration: 0.3,
         });
-        gsap.to(".grid", { height: "80vw", x: "-14vw", duration: 0.3 });
+        gsap.to(".grid", { height: "61.5vw", x: "-14vw", duration: 0.3 });
     }
 
     function transformBR() {
         gsap.to(".top-left", {
             height: "10vw",
             width: "10vw",
-            y: "18vw",
-            x: "1vw",
+            y: "6.5vw",
             duration: 0.3,
         });
         gsap.to(".top-right", {
             height: "10vw",
             width: "10vw",
-            y: "18vw",
+            y: "6.5vw",
             duration: 0.3,
         });
         gsap.to(".bottom-right", {
-            height: "50vw",
-            width: "95vw",
+            height: "43vw",
+            width: "84vw",
             duration: 0.3,
         });
         gsap.to(
@@ -188,7 +184,6 @@ function MobileProjects() {
         gsap.to(".bottom-left", {
             height: "10vw",
             width: "10vw",
-            x: "1vw",
             duration: 0.3,
         });
         setProject(fitnessDescription);
@@ -202,33 +197,36 @@ function MobileProjects() {
             opacity: 1,
             duration: 0.3,
         });
-        gsap.to(".grid", { height: "80vw", x: "-14vw", duration: 0.3 });
+        gsap.to(".grid", {
+            height: "61vw",
+            y: "-8vw",
+            x: "-14vw",
+            duration: 0.3,
+        });
     }
 
     function transformBL() {
         gsap.to(".top-left", {
-            x: "85vw",
-            y: "18vw",
+            y: "6.5vw",
+                x: "74vw",
             height: "10vw",
             width: "10vw",
             duration: 0.3,
         });
         gsap.to(".top-right", {
-            x: "-1vw",
             height: "10vw",
             width: "10vw",
-            y: "18vw",
+            y: "6.5vw",
             duration: 0.3,
         });
         gsap.to(".bottom-right", {
-            x: "-1vw",
             height: "10vw",
             width: "10vw",
             duration: 0.3,
         });
         gsap.to(".bottom-left", {
-            height: "50vw",
-            width: "95vw",
+            height: "43vw",
+            width: "84vw",
             duration: 0.3,
         });
         gsap.to(
@@ -248,7 +246,12 @@ function MobileProjects() {
             opacity: 1,
             duration: 0.3,
         });
-        gsap.to(".grid", { height: "80vw", x: "-3vw", duration: 0.3 });
+        gsap.to(".grid", {
+            height: "61vw",
+            y: "-8vw",
+            x: "-4vw",
+            duration: 0.3,
+        });
     }
     return (
         <div className="projects">
@@ -294,4 +297,4 @@ function MobileProjects() {
     );
 }
 
-export default MobileProjects;
+export default MediumProjects;
