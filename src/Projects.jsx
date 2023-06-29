@@ -5,6 +5,12 @@ import { useEffect } from "react";
 import Grid from "@mui/material/Grid";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { createTheme, ThemeProvider } from "@mui/material";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+import { useLayoutEffect } from "react";
+
+
+
 
 const theme = createTheme({
     breakpoints: {
@@ -45,6 +51,23 @@ let fitnessDescription = {
 function Projects() {
     const [project, setProject] = useState({});
     const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+
+    useLayoutEffect(() => {
+        let ctx = gsap.context(() => {
+            gsap.utils.checkPrefix("transform");
+        let tl1 = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".grid",
+                start: "top center",
+            },
+        });
+        tl1.from(".grid", {x:'-140vw', rotate: -720, duration: 3})
+        });
+        return () => ctx.revert(); 
+      }, []);
+
+
+
 
     function unTransform() {
         gsap.to(".top-left", {

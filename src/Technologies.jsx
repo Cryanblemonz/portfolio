@@ -10,18 +10,25 @@ function Technologies() {
         gsap.utils.checkPrefix("transform");
         let tl1 = gsap.timeline({
             scrollTrigger: {
-                trigger: ".mongo",
+                trigger: ".technologies",
                 start: "bottom bottom",
             },
         });
-        tl1.to(
-            ".javascript",
-            {
-                "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-                opacity: 1,
-                y: 0,
-                duration: 0.8,
-            });
+        tl1.to(".technologies", {
+            x: 0,
+            opacity: 1,
+            "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+            duration: 1.3,
+            ease: "power2.out"
+        });
+
+        tl1.to(".javascript", {
+            "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            delay: 0.4,
+        });
         tl1.to(
             ".react",
             {
@@ -29,18 +36,21 @@ function Technologies() {
                 opacity: 1,
                 y: 0,
                 duration: 0.8,
-                delay: 0.2
-            }, "-=0.8");
+                delay: 0.2,
+            },
+            "-=0.8"
+        );
         tl1.to(
             ".node",
-            {       
+            {
                 "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
                 opacity: 1,
                 y: 0,
                 duration: 0.8,
-                delay: 0.2
-
-            }, "-=0.8");
+                delay: 0.2,
+            },
+            "-=0.8"
+        );
         tl1.to(
             ".mongo",
             {
@@ -48,61 +58,88 @@ function Technologies() {
                 opacity: 1,
                 y: 0,
                 duration: 0.8,
-                delay: 0.2
-
-            }, "-=0.8");
-        tl1.to(".postgres", {
-            "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            delay: 0.2
-        }, "-=0.8");
-        tl1.to(".jquery", {
-            "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            delay: 0.2
-        }, "-=0.8");
-        tl1.to(".gsap", {
-            "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            delay: 0.2
-        }, "-=0.8");
-        tl1.to(".mui", {
-            "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            delay: 0.2
-        }, "-=0.8");
-        tl1.to(".html", {
-            "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            delay: 0.2
-        }, "-=0.8");
-        tl1.to(".css", {
-            "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            delay: 0.2
-        }, "-=0.8");
-        tl1.to(".bootstrap", {
-            "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            delay: 0.2
-
-        }, "-=0.8");
+                delay: 0.2,
+            },
+            "-=0.8"
+        );
+        tl1.to(
+            ".postgres",
+            {
+                "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                delay: 0.2,
+            },
+            "-=0.8"
+        );
+        tl1.to(
+            ".jquery",
+            {
+                "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                delay: 0.2,
+            },
+            "-=0.8"
+        );
+        tl1.to(
+            ".gsap",
+            {
+                "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                delay: 0.2,
+            },
+            "-=0.8"
+        );
+        tl1.to(
+            ".mui",
+            {
+                "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                delay: 0.2,
+            },
+            "-=0.8"
+        );
+        tl1.to(
+            ".html",
+            {
+                "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                delay: 0.2,
+            },
+            "-=0.8"
+        );
+        tl1.to(
+            ".css",
+            {
+                "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                delay: 0.2,
+            },
+            "-=0.8"
+        );
+        tl1.to(
+            ".bootstrap",
+            {
+                "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                delay: 0.2,
+            },
+            "-=0.8"
+        );
     }, []);
-
 
     return (
         <div className="technologies">
@@ -114,7 +151,6 @@ function Technologies() {
                             img="public\images\javascript.png"
                             text="JavaScript"
                             className="language javascript"
-                            
                         />
                     </Grid>
                     <Grid item xs={4}>
@@ -122,7 +158,6 @@ function Technologies() {
                             img="public\images\react.png"
                             text="React.JS"
                             className="language react"
-                            
                         />
                     </Grid>
                     <Grid item xs={4}>
@@ -130,7 +165,6 @@ function Technologies() {
                             img="public\images\node.png"
                             text="Node.JS / Express"
                             className="language node"
-                            
                         />
                     </Grid>
                 </Grid>
@@ -140,7 +174,6 @@ function Technologies() {
                             img="public\images\MongoDB.png"
                             text="MongoDB"
                             className="language mongo"
-                            
                         />
                     </Grid>
                     <Grid item xs={3}>
@@ -148,7 +181,6 @@ function Technologies() {
                             img="public\images\postgresql.png"
                             text="PostgreSQL"
                             className="language postgres"
-                            
                         />
                     </Grid>
 
@@ -157,7 +189,6 @@ function Technologies() {
                             img="public\images\jquery.png"
                             text="jQuery"
                             className="language jquery"
-                            
                         />
                     </Grid>
                     <Grid item xs={3}>
@@ -165,7 +196,6 @@ function Technologies() {
                             img="public\images\gsap.png"
                             text="GSAP"
                             className="language gsap"
-                            
                         />
                     </Grid>
                 </Grid>
@@ -175,7 +205,6 @@ function Technologies() {
                             img="public\images\MUI.png"
                             text="Material UI"
                             className="language mui"
-                            
                         />
                     </Grid>
                     <Grid item xs={3}>
@@ -183,7 +212,6 @@ function Technologies() {
                             img="public\images\html.png"
                             text="HTML"
                             className="language html"
-                            
                         />
                     </Grid>
                     <Grid item xs={3}>
@@ -191,7 +219,6 @@ function Technologies() {
                             img="public\images\css.png"
                             text="CSS"
                             className="language css"
-                            
                         />
                     </Grid>
                     <Grid item xs={3}>
@@ -199,7 +226,6 @@ function Technologies() {
                             img="public\images\Bootstrap.png"
                             text="Bootstrap"
                             className="language bootstrap"
-                            
                         />
                     </Grid>
                 </Grid>

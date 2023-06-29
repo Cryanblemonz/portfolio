@@ -73,10 +73,14 @@ h1 {
         rgba(228, 246, 255, 1) 0%,
         rgba(0, 0, 0, 1) 50%
     );
-    width: 100%;
+    width: 95%;
     margin: 0 auto;
     padding-top: 25px;
     padding-bottom: 25px;
+    opacity: 0;
+    transform: translateX(-1000px);
+    clip-path: polygon(0 100%, 100% 100%, 0 100%, 0% 100%);
+
 }
 
 .projects {
@@ -118,6 +122,7 @@ h1 {
     grid-template-rows: 1fr 1fr;
     gap: 0.5vw;
     margin: 0 auto;
+    translate: 0;
 }
 
 .top-left {
@@ -276,14 +281,16 @@ label:focus {
 }
 
 @media (max-width: 900px) {
-  
+    .headshot-div{
+      height: auto;
+    }
     .headshot {
-        width: 80%;
+        width: 50%;
         display: block;
-        margin: 150px auto 20px auto;
+        margin: 5vw auto 20px auto;
     }
     .header-h1s {
-        font-size: 7vw;
+        font-size: 5vw;
         text-align: center;
     }
     .full-stack {
