@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useLayoutEffect } from "react";
 import "./App.css";
 import Header from "./Header.jsx";
 import Technologies from "./Technologies";
@@ -10,9 +10,8 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useLayoutEffect } from "react";
-gsap.registerPlugin(ScrollTrigger);
 
+gsap.registerPlugin(ScrollTrigger);
 
 const theme = createTheme({
     breakpoints: {
@@ -27,18 +26,43 @@ const theme = createTheme({
 });
 
 function App() {
+    const isLargeScreen = useMediaQuery(theme.breakpoints.up("lg"));
     const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
     const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
+    
+    if(isLargeScreen){
+      useLayoutEffect(() => {
+        const sections = gsap.utils.toArray('.section');
+        gsap.to(sections, {
+            yPercent: -100 * (sections.length - 1),
+            ease: "none",
+            duration: 0.3,
+            scrollTrigger: {
+                trigger: ".container",
+                pin: true,
+                scrub: 1,
+                snap: {
+                  snapTo: 1 / (sections.length - 1),
+                },
+                end: () => "+=" + document.querySelector(".container").offsetHeight
+            }
+        });
+
+        return () => ScrollTrigger.getAll().forEach((st) => st.kill());
+    }, []);
+    }
+
+  
     return (
         <div className="container">
-            <div className="section">
+            <section className="section">
                 <Header />
-            </div>
-            <div className="section">
+            </section>
+            <section className="section">
                 <Technologies />
-            </div>
-            <div className="section">
+            </section>
+            <section className="section">
                 {isSmallScreen ? (
                     <MobileProjects />
                 ) : isMediumScreen ? (
@@ -46,10 +70,10 @@ function App() {
                 ) : (
                     <Projects />
                 )}
-            </div>
-            <div className="section">
+            </section>
+            <section className="section">
                 <Contact />
-            </div>
+            </section>
         </div>
     );
 }

@@ -62,7 +62,7 @@ function Contact() {
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".want-to",
-                start: "bottom bottom",
+                start: "top center",
             },
         });
         tl.to(".want-to", {

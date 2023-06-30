@@ -11,7 +11,7 @@ function Technologies() {
         let tl1 = gsap.timeline({
             scrollTrigger: {
                 trigger: ".technologies",
-                start: "center bottom",
+                start: "top center",
             },
         });
         tl1.to(".technologies", {

@@ -286,7 +286,7 @@ function MediumProjects() {
                                     <img
                                         src={`public/images/${item}.png`}
                                         alt={item}
-                                        style={{ height: "50px" }}
+                                        style={{ height: "40px" }}
                                     />
                                 </Grid>
                             ))}

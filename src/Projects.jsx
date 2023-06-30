@@ -9,9 +9,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import { useLayoutEffect } from "react";
 
-
-
-
 const theme = createTheme({
     breakpoints: {
         values: {
@@ -55,20 +52,21 @@ function Projects() {
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
             gsap.utils.checkPrefix("transform");
-        let tl1 = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".grid",
-            },
+            let tl1 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".grid",
+                    start: "top center",
+                    delay: 0.1
+                },
+            });
+            tl1.from(".grid", { x: "-140vw", rotate: -720, duration: 3 });
         });
-        tl1.from(".grid", {x:'-140vw', rotate: -720, duration: 3})
-        });
-        return () => ctx.revert(); 
-      }, []);
-
-
-
+        return () => ctx.revert();
+    }, []);
 
     function unTransform() {
+        gsap.to(".github-icon", { opacity: 0, duration: 0.3 });
+
         gsap.to(".top-left", {
             x: 0,
             y: 0,
@@ -111,8 +109,7 @@ function Projects() {
             opacity: 0,
             duration: 0.3,
         });
-        gsap.to(".grid", {height: "41vw", y: 0, x: 0, duration: 0.3})
-
+        gsap.to(".grid", { height: "41vw", y: -25, x: 0,   duration: 0.3 });
     }
 
     async function transformTL() {
@@ -122,6 +119,7 @@ function Projects() {
             "-=1"
         );
         gsap.to(".top-left", { height: "25vw", width: "25vw", duration: 0.3 });
+        gsap.to(".top-left .github-icon", { opacity: 1, duration: 0.3 });
 
         gsap.to(".top-right", {
             y: "20vw",
@@ -151,7 +149,7 @@ function Projects() {
             opacity: 1,
             duration: 0.3,
         });
-        gsap.to(".grid", {height: "31vw", duration: 0.3})
+        gsap.to(".grid", { height: "31vw", duration: 0.3 });
     }
 
     function transformTR() {
@@ -167,6 +165,7 @@ function Projects() {
             { borderRadius: "0 25 0 0", duration: 0.3 },
             "-=2"
         );
+        gsap.to(".top-right .github-icon", { opacity: 1, duration: 0.3 });
         gsap.to(".bottom-right", {
             height: "5vw",
             width: "5vw",
@@ -184,17 +183,18 @@ function Projects() {
             opacity: 1,
             duration: 0.3,
         });
-        gsap.to(".grid", {height: "31vw", duration: 0.3})
-
+        gsap.to(".grid", { height: "31vw", duration: 0.3 });
     }
 
     function transformBR() {
         gsap.to(".top-left", {
+            y: "0.2vw",
             height: "5vw",
             width: "5vw",
             duration: 0.3,
         });
         gsap.to(".top-right", {
+            y: "0.2vw",
             height: "5vw",
             width: "5vw",
             duration: 0.3,
@@ -209,6 +209,8 @@ function Projects() {
             { borderRadius: "0 0 25 0", duration: 0.3 },
             "-=2"
         );
+        gsap.to(".bottom-right .github-icon", { opacity: 1, duration: 0.3 });
+
         gsap.to(".bottom-left", {
             height: "5vw",
             width: "5vw",
@@ -225,28 +227,35 @@ function Projects() {
             opacity: 1,
             duration: 0.3,
         });
-        gsap.to(".grid", {height: "31vw", duration: 0.3})
-
+        gsap.to(".grid", { height: "31vw", duration: 0.3 });
     }
 
     function transformBL() {
         gsap.to(".top-left", {
             x: "40vw",
+            y: "0.2vw",
             height: "5vw",
             width: "5vw",
             duration: 0.3,
         });
-        gsap.to(".top-right", { height: "5vw", width: "5vw", duration: 0.3 });
+        gsap.to(".top-right", {
+            height: "5vw",
+            y: "0.2vw",
+            width: "5vw",
+            duration: 0.3,
+        });
         gsap.to(".bottom-right", {
             height: "5vw",
             width: "5vw",
             duration: 0.3,
         });
-        gsap.to(".bottom-left", {   
+        gsap.to(".bottom-left", {
             height: "25vw",
             width: "45vw",
             duration: 0.3,
         });
+        gsap.to(".bottom-left .github-icon", { opacity: 1, duration: 0.3 });
+
         gsap.to(
             ".bottom-left",
             { borderRadius: "0 0 0 25", duration: 0.7 },
@@ -268,30 +277,39 @@ function Projects() {
             opacity: 1,
             duration: 0.3,
         });
-        gsap.to(".grid", {height: "31vw", duration: 0.3})
-
+        gsap.to(".grid", { height: "31vw", duration: 0.3 });
     }
     return (
         <div className="projects">
             <h1>My Work</h1>
-
             <div className="grid">
                 <div
                     className="project top-left"
                     onMouseEnter={transformTL}
-                    onMouseLeave={unTransform}></div>
+                    onMouseLeave={unTransform}>
+                    <img className="github-icon" src="images/github.png"></img>
+                </div>
                 <div
                     className="project top-right"
                     onMouseEnter={transformTR}
-                    onMouseLeave={unTransform}></div>
+                    onMouseLeave={unTransform}>
+                    <img className="github-icon" src="images/github.png"></img>
+                </div>
                 <div
                     className="project bottom-left"
                     onMouseEnter={transformBL}
-                    onMouseLeave={unTransform}></div>
+                    onMouseLeave={unTransform}>
+                    <img className="github-icon" src="images/github.png"></img>
+                </div>
                 <div
                     className="project bottom-right"
                     onMouseEnter={transformBR}
-                    onMouseLeave={unTransform}></div>
+                    onMouseLeave={unTransform}>
+                        <img
+                            className="github-icon"
+                            src="images/github.png"></img>
+
+                </div>
             </div>
             <div className="project-description">
                 <h2>{project.header}</h2>
