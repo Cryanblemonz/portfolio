@@ -80,8 +80,18 @@ h1 {
     opacity: 0;
     transform: translateX(-1000px);
     clip-path: polygon(0 100%, 100% 100%, 0 100%, 0% 100%);
-
 }
+
+/* .section{
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+.container{
+  max-height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+} */
 
 .projects {
     perspective: 10px;
@@ -272,11 +282,24 @@ label:focus {
 }
 
 @media(min-width: 1200px){
+  .header-div{
+    height: 100vh;
+    padding-top: 2%;
+  }
+  .header-para{
+    margin-top: 5%;
+  }
   .project-description{
     position: absolute;
     top: 100px;
     right: 25px;
     width: 25vw;
+  }
+  .projects{
+    height: 110vh;
+  }
+  .grid{
+    transform: scale(95%) translateY(-4%);
   }
 }
 
@@ -285,13 +308,13 @@ label:focus {
       height: auto;
     }
     .headshot {
-        width: 50%;
+        width: 70%;
         display: block;
-        margin: 5vw auto 20px auto;
+        margin: 100px auto 50px auto;
     }
     .header-h1s {
-        font-size: 5vw;
-        text-align: center;
+      font-size: 7vw;
+      text-align: center;
     }
     .full-stack {
         font-size: 5vw;

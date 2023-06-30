@@ -1,6 +1,6 @@
 import Grid from "@mui/material/Grid";
-import { gsap } from "gsap";
 import Language from "./Language";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
@@ -11,7 +11,7 @@ function Technologies() {
         let tl1 = gsap.timeline({
             scrollTrigger: {
                 trigger: ".technologies",
-                start: "bottom bottom",
+                start: "center bottom",
             },
         });
         tl1.to(".technologies", {

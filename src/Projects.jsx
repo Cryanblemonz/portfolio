@@ -58,7 +58,6 @@ function Projects() {
         let tl1 = gsap.timeline({
             scrollTrigger: {
                 trigger: ".grid",
-                start: "top center",
             },
         });
         tl1.from(".grid", {x:'-140vw', rotate: -720, duration: 3})
@@ -305,7 +304,7 @@ function Projects() {
                                     <img
                                         src={`public/images/${item}.png`}
                                         alt={item}
-                                        style={{ height: "50px" }}
+                                        style={{ height: "45px" }}
                                     />
                                 </Grid>
                             ))}

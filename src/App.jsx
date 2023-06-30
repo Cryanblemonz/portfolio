@@ -8,6 +8,11 @@ import MobileProjects from "./MobileProjects";
 import Contact from "./Contact";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { createTheme, ThemeProvider } from "@mui/material";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useLayoutEffect } from "react";
+gsap.registerPlugin(ScrollTrigger);
+
 
 const theme = createTheme({
     breakpoints: {
@@ -26,11 +31,25 @@ function App() {
     const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
     return (
-        <div>
-            <Header />
-            <Technologies />
-            {isSmallScreen ?  <MobileProjects /> : isMediumScreen ? <MediumProjects /> : <Projects />}
-            <Contact />
+        <div className="container">
+            <div className="section">
+                <Header />
+            </div>
+            <div className="section">
+                <Technologies />
+            </div>
+            <div className="section">
+                {isSmallScreen ? (
+                    <MobileProjects />
+                ) : isMediumScreen ? (
+                    <MediumProjects />
+                ) : (
+                    <Projects />
+                )}
+            </div>
+            <div className="section">
+                <Contact />
+            </div>
         </div>
     );
 }
