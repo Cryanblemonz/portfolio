@@ -26,33 +26,11 @@ const theme = createTheme({
 });
 
 function App() {
-    const isLargeScreen = useMediaQuery(theme.breakpoints.up("lg"));
     const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
     const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
     
-    if(isLargeScreen){
-      useLayoutEffect(() => {
-        const sections = gsap.utils.toArray('.section');
-        gsap.to(sections, {
-            yPercent: -100 * (sections.length - 1),
-            ease: "none",
-            duration: 0.3,
-            scrollTrigger: {
-                trigger: ".container",
-                pin: true,
-                scrub: 1,
-                snap: {
-                  snapTo: 1 / (sections.length - 1),
-                },
-                end: () => "+=" + document.querySelector(".container").offsetHeight
-            }
-        });
-
-        return () => ScrollTrigger.getAll().forEach((st) => st.kill());
-    }, []);
-    }
-
+  
   
     return (
         <div className="container">

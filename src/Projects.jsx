@@ -48,6 +48,7 @@ let fitnessDescription = {
 function Projects() {
     const [project, setProject] = useState({});
     const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+    const [clippyShown, setClippyShown] = useState(false);
 
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
@@ -146,10 +147,15 @@ function Projects() {
         });
         gsap.to(".project-description-p", {
             fontSize: "1.3rem",
-            opacity: 1,
+            opacity: 1, 
             duration: 0.3,
         });
         gsap.to(".grid", { height: "31vw", duration: 0.3 });
+        if(!clippyShown){
+            gsap.to(".clippy", {x: 0, duration: 1.3, delay: 2})
+            setClippyShown(true);
+            gsap.to(".clippy", {x: "100vw", duration: 1.3, delay: 15})
+        }
     }
 
     function transformTR() {
@@ -282,6 +288,7 @@ function Projects() {
     return (
         <div className="projects">
             <h1>My Work</h1>
+            <img className="clippy" src="images/clippy.webp"></img>
             <div className="grid">
                 <div
                     className="project top-left"

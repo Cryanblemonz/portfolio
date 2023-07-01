@@ -306,6 +306,14 @@ label:focus {
     transform: translateX(1000px) rotate(350deg);
 }
 
+.clippy{
+  height: 300px;
+  position: absolute;
+  right: 20px;
+  bottom: 100px;
+  transform: translateX(50vw);
+}
+
 @media(min-width: 1200px){
   .header-div{
     height: 100vh;
