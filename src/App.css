@@ -4,6 +4,11 @@ body {
     background-image: url(/images/background3.jpg);
     background-attachment: fixed;
     background-size: cover;
+    overflow-x: hidden;
+}
+
+.section{
+  height: auto;
 }
 
 .full-stack {
@@ -216,7 +221,6 @@ h1 {
 .contact {
     margin: 0 auto 100px auto;
     width: 90vw;    
-    height: auto;
 }
 
 .contact h1 {
@@ -259,6 +263,9 @@ h1 {
     position: relative;
     padding: 0 20px 0 20px;
     text-align: center;
+    opacity: 0;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    transform: translateY(-100px);
 }
 
 .message-sent-div {
@@ -296,27 +303,8 @@ label:focus {
     transform: translateX(-100px);
 }
 
-.inputs {
-    opacity: 0;
-    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-    transform: translateY(-100px);
-}
-
-.fab-button {
-    transform: translateX(1000px) rotate(350deg);
-}
-
-.clippy{
-  height: 300px;
-  position: absolute;
-  right: 20px;
-  bottom: 100px;
-  transform: translateX(50vw);
-}
-
 @media(min-width: 1200px){
   .header-div{
-    height: 100vh;
     padding-top: 2%;
   }
   .header-para{
@@ -333,10 +321,6 @@ label:focus {
   }
   .grid{
     transform: scale(95%) translateY(-4%);
-  }
-
-  .section{
-    height: 100vh;
   }
 }
 
@@ -390,6 +374,10 @@ label:focus {
 }
 
 @media (max-width: 600px) {
+  .want-to{
+    text-align: center;
+    margin: 0;
+  }
   .grid{
     width: 91vw;
     height: 91vw;
@@ -399,6 +387,6 @@ label:focus {
     height: 60px;
   }
   .language h2{
-    font-size: 1rem;
+    font-size: 4vw;
   }
 }

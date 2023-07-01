@@ -9,6 +9,7 @@ import Fab from "@mui/material/Fab";
 import SendIcon from "@mui/icons-material/Send";
 import axios from "axios";
 import ReplayIcon from "@mui/icons-material/Replay";
+import { Block } from "@mui/icons-material";
 
 const rootStyles = {
     border: "1px solid #001d3d",
@@ -105,7 +106,7 @@ function Contact() {
             },
             "-=1.2"
         );
-        tl.to(".inputs", {
+        tl.to(".contact-form", {
             "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
             opacity: 1,
             y: 0,
@@ -113,14 +114,7 @@ function Contact() {
         });
     }, []);
 
-    function showFab() {
-        gsap.to(".fab-button", {
-            x: 0,
-            rotate: -1080,
-            duration: 1,
-            ease: "power2.out",
-        });
-    }
+
 
     return (
         <div className="contact">
@@ -166,7 +160,6 @@ function Contact() {
                                 <TextField
                                     variant="outlined"
                                     label="Name"
-                                    onClick={showFab}
                                     fullWidth
                                     size="medium"
                                     onChange={(event) => {
