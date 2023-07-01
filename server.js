@@ -38,8 +38,8 @@ app.post("/send", (req, res) => {
     
 
     let mailOptions = {
-        from: '"Nodemailer Contact" <bclemons466@gmail.com>', 
-        to: "gbc466@gmail.com", 
+        from: '<"Nodemailer Contact">', 
+        to: process.env.email, 
         subject: "Node Contact Request", 
         text: `Name: ${req.body.contactName}\nEmail: ${req.body.email}\nMessage: ${req.body.message}`,
         html: output, 
