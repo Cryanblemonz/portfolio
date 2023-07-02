@@ -48,14 +48,14 @@ function animate() {
 }
 
 function Header() {
-    const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
     return (
         <div className="header-div">
             <div className="headshot-div" onLoad={animate}>
                 {!isSmallScreen ? (
                     <Grid container>
-                        <Grid item xs={5} style={{ margin: "25px" }}>
+                        <Grid item sm={5} style={{ margin: "25px" }}>
                             <div className="headshot-headings">
                                 <h1 className="header-h1s">
                                     Hi, I'm Bryan.&nbsp;
@@ -77,10 +77,10 @@ function Header() {
                                 </h1>
                             </div>
                         </Grid>
-                        <Grid item xs={5}>
+                        <Grid item sm={5}>
                             <img
                                 className="headshot"
-                                src="public\images\headshot.png"></img>
+                                src="\images\headshot.png"></img>
                         </Grid>
                     </Grid>
                 ) : (

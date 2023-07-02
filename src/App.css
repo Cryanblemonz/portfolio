@@ -13,7 +13,7 @@ body {
 
 .full-stack {
     color: orange;
-    font-size: 2.2rem;
+    font-size: 3.3vw;
 }
 
 .header-div {
@@ -46,7 +46,7 @@ h1 {
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
     opacity: 0;
     font-weight: 900;
-    font-size: 3vw;
+    font-size: 3.4vw;
     padding: 0;
 }
 
@@ -57,7 +57,7 @@ h1 {
 .header-para {
     text-align: center;
     color: white;
-    font-size: 1.8rem;
+    font-size: 2.8vw;
     width: 70%;
     display: block;
     margin: 10px auto;
@@ -124,7 +124,7 @@ h1 {
 
 .top-left {
     border-radius: 9999px 0 0 0;
-    background-image: url(/public/images/rescueroadgif.gif);
+    background-image: url(/images/rescueroadgif.gif);
     background-size: cover;
     background-position-x: -10px;
     position: relative;
@@ -132,21 +132,21 @@ h1 {
 
 .top-right {
     border-radius: 0 9999px 0 0;
-    background-image: url(/public/images/gymgeniegif.gif);
+    background-image: url(/images/gymgeniegif.gif);
     background-size: cover;
     position: relative;
 }
 
 .bottom-left {
     border-radius: 0 0 0 9999px;
-    background-image: url(/public/images/snake.gif);
+    background-image: url(/images/snake.gif);
     background-size: cover;
     position: relative;
 }
 
 .bottom-right {
     border-radius: 0 0 9999px 0;
-    background-image: url(/public/images/fitness.png);
+    background-image: url(/images/fitness.png);
     background-size: cover;
     position: relative;
 }
@@ -324,7 +324,7 @@ label:focus {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
     .headshot-div{
       height: auto;
     }
@@ -348,7 +348,7 @@ label:focus {
     }
 
     .want-to-box ul {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
     .want-to-grid {
         margin: 0 auto !important;
@@ -356,12 +356,23 @@ label:focus {
     }
     .contact h3 {
         font-size: 2rem;
+        text-align: left;
+        margin-left: 20px;
     }
     .chess-img {
         width: 20vw;
     }
     .contact {
         width: 95%;
+    }
+    .want-to{
+      margin-left: 20px;
+    }
+    .want-to-box{
+      margin: 0 auto;
+      display: block;
+      width: 90%;
+      word-wrap:break-word;
     }
 }
 
@@ -371,13 +382,26 @@ label:focus {
     height: 71.5vw;
     gap: 1.5vh;
   }
+  /* .headshot{
+    margin: 50px auto;
+    display: block;
+    width: 50%;
+  }
+  .header-h1s{
+    text-align: center;
+    font-size: 4.5vw;
+  }
+  .full-stack{
+    font-size: 3.4vw;
+  }
+  .header-para{
+    font-size: 2.7vw;
+    width: 80%;
+  } */
 }
 
 @media (max-width: 600px) {
-  .want-to{
-    text-align: center;
-    margin: 0;
-  }
+
   .grid{
     width: 91vw;
     height: 91vw;

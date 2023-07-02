@@ -148,21 +148,21 @@ function Technologies() {
                 <Grid container spacing={2}>
                     <Grid item xs={4}>
                         <Language
-                            img="public\images\javascript.png"
+                            img="images\javascript.png"
                             text="JavaScript"
                             className="language javascript"
                         />
                     </Grid>
                     <Grid item xs={4}>
                         <Language
-                            img="public\images\react.png"
+                            img="images\react.png"
                             text="React.JS"
                             className="language react"
                         />
                     </Grid>
                     <Grid item xs={4}>
                         <Language
-                            img="public\images\node.png"
+                            img="images\node.png"
                             text="Node.JS / Express"
                             className="language node"
                         />
@@ -171,14 +171,14 @@ function Technologies() {
                 <Grid container spacing={2} style={{ marginTop: "20px" }}>
                     <Grid item xs={3}>
                         <Language
-                            img="public\images\MongoDB.png"
+                            img="images\MongoDB.png"
                             text="MongoDB"
                             className="language mongo"
                         />
                     </Grid>
                     <Grid item xs={3}>
                         <Language
-                            img="public\images\postgresql.png"
+                            img="images\postgresql.png"
                             text="PostgreSQL"
                             className="language postgres"
                         />
@@ -186,14 +186,14 @@ function Technologies() {
 
                     <Grid item xs={3}>
                         <Language
-                            img="public\images\jquery.png"
+                            img="images\jquery.png"
                             text="jQuery"
                             className="language jquery"
                         />
                     </Grid>
                     <Grid item xs={3}>
                         <Language
-                            img="public\images\gsap.png"
+                            img="images\gsap.png"
                             text="GSAP"
                             className="language gsap"
                         />
@@ -202,28 +202,28 @@ function Technologies() {
                 <Grid container spacing={2} style={{ marginTop: "20px" }}>
                     <Grid item xs={3}>
                         <Language
-                            img="public\images\MUI.png"
+                            img="images\MUI.png"
                             text="Material UI"
                             className="language mui"
                         />
                     </Grid>
                     <Grid item xs={3}>
                         <Language
-                            img="public\images\html.png"
+                            img="images\html.png"
                             text="HTML"
                             className="language html"
                         />
                     </Grid>
                     <Grid item xs={3}>
                         <Language
-                            img="public\images\css.png"
+                            img="images\css.png"
                             text="CSS"
                             className="language css"
                         />
                     </Grid>
                     <Grid item xs={3}>
                         <Language
-                            img="public\images\Bootstrap.png"
+                            img="images\Bootstrap.png"
                             text="Bootstrap"
                             className="language bootstrap"
                         />

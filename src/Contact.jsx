@@ -123,7 +123,6 @@ function Contact() {
                 <Grid item md={6} xs={12} className="want-to-grid">
                     <div className="want-to-box">
                         <h3 className="want-to contact-element">Want to... </h3>
-                        <ul>
                             <li className="hire contact-element">Hire me?</li>
                             <li className="help contact-element">
                                 Get help with your project?
@@ -140,10 +139,9 @@ function Contact() {
                                 <Grid item xs={2}>
                                     <img
                                         className="chess-img contact-element"
-                                        src="public\images\chess.gif"></img>
+                                        src="\images\chess.gif"></img>
                                 </Grid>
                             </Grid>
-                        </ul>
                     </div>
                 </Grid>
                 <Grid item md={6} xs={12}>
