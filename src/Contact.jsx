@@ -47,7 +47,7 @@ function Contact() {
         gsap.to(".message-sent-div", {
             "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
             opacity: 1,
-            x: 0,
+            y: 0,
             duration: 1.2,
         });
     }
@@ -123,6 +123,7 @@ function Contact() {
                 <Grid item md={6} xs={12} className="want-to-grid">
                     <div className="want-to-box">
                         <h3 className="want-to contact-element">Want to... </h3>
+                        <ul>
                             <li className="hire contact-element">Hire me?</li>
                             <li className="help contact-element">
                                 Get help with your project?
@@ -142,6 +143,7 @@ function Contact() {
                                         src="\images\chess.gif"></img>
                                 </Grid>
                             </Grid>
+                            </ul>
                     </div>
                 </Grid>
                 <Grid item md={6} xs={12}>
