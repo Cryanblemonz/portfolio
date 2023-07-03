@@ -56,7 +56,7 @@ function Projects() {
                 scrollTrigger: {
                     trigger: ".grid",
                     start: "top center",
-                    delay: 0.1
+                    delay: 0.1,
                 },
             });
             tl1.from(".grid", { x: "-140vw", rotate: -720, duration: 3 });
@@ -109,7 +109,7 @@ function Projects() {
             opacity: 0,
             duration: 0.3,
         });
-        gsap.to(".grid", { height: "41vw", y: -25, x: 0,   duration: 0.3 });
+        gsap.to(".grid", { height: "41vw", y: -25, x: 0, duration: 0.3 });
     }
 
     async function transformTL() {
@@ -146,7 +146,7 @@ function Projects() {
         });
         gsap.to(".project-description-p", {
             fontSize: "1.3rem",
-            opacity: 1, 
+            opacity: 1,
             duration: 0.3,
         });
         gsap.to(".grid", { height: "31vw", duration: 0.3 });
@@ -283,33 +283,62 @@ function Projects() {
         <div className="projects">
             <h1>My Work</h1>
             <div className="grid">
-                <div
+                <a
+                    href="https://www.rescueroadpets.com"
+                    target="_blank"
                     className="project top-left"
                     onMouseEnter={transformTL}
                     onMouseLeave={unTransform}>
-                    <img className="github-icon" src="images/github.png"></img>
-                </div>
-                <div
-                    className="project top-right"
-                    onMouseEnter={transformTR}
-                    onMouseLeave={unTransform}>
-                    <img className="github-icon" src="images/github.png"></img>
-                </div>
-                <div
-                    className="project bottom-left"
-                    onMouseEnter={transformBL}
-                    onMouseLeave={unTransform}>
-                    <img className="github-icon" src="images/github.png"></img>
-                </div>
-                <div
-                    className="project bottom-right"
-                    onMouseEnter={transformBR}
-                    onMouseLeave={unTransform}>
+                    <a
+                        href="https://github.com/Cryanblemonz/RescueRoad"
+                        target="_blank">
                         <img
                             className="github-icon"
                             src="images/github.png"></img>
-
-                </div>
+                    </a>
+                </a>
+                <a
+                    href="https://gymgenie-42u8.onrender.com"
+                    target="_blank"
+                    className="project top-right"
+                    onMouseEnter={transformTR}
+                    onMouseLeave={unTransform}>
+                    <a
+                        href="https://github.com/Cryanblemonz/GymGenie"
+                        target="_blank">
+                        <img
+                            className="github-icon"
+                            src="images/github.png"></img>
+                    </a>
+                </a>
+                <a
+                    href="https://cryanblemonz.github.io/Snake-Game/"
+                    target="_blank"
+                    className="project bottom-left"
+                    onMouseEnter={transformBL}
+                    onMouseLeave={unTransform}>
+                    <a
+                        href="https://github.com/Cryanblemonz/Snake-Game"
+                        target="_blank">
+                        <img
+                            className="github-icon"
+                            src="images/github.png"></img>
+                    </a>
+                </a>
+                <a
+                    href="https://www.kwebbfitness.com/"
+                    target="_blank"
+                    className="project bottom-right"
+                    onMouseEnter={transformBR}
+                    onMouseLeave={unTransform}>
+                    <a
+                        href="https://github.com/Cryanblemonz/KWebbFitness"
+                        target="_blank">
+                        <img
+                            className="github-icon"
+                            src="images/github.png"></img>
+                    </a>
+                </a>
             </div>
             <div className="project-description">
                 <h2>{project.header}</h2>
