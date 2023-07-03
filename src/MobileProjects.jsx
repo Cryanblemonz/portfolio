@@ -64,6 +64,7 @@ function MobileProjects() {
             duration: 0.3,
             borderRadius: "0 0 0 9999 ",
         });
+        gsap.to(".github-icon", { opacity: 0, duration: 0.3 });
         gsap.to(".project-description", {
             fontSize: "0",
             opacity: 0,
@@ -106,6 +107,8 @@ function MobileProjects() {
             width: "10vw",
             duration: 0.3,
         });
+        gsap.to(".top-left .github-icon", { opacity: 1, duration: 0.3 });
+
         setProject(rescueRoadDescription);
         gsap.to(".project-description", {
             fontSize: "1.3rem",
@@ -147,6 +150,8 @@ function MobileProjects() {
             y: "-1vw",
             duration: 0.3,
         });
+        gsap.to(".top-right .github-icon", { opacity: 1, duration: 0.3 });
+
         setProject(gymGenieDescription);
         gsap.to(".project-description", {
             fontSize: "1.3rem",
@@ -191,6 +196,7 @@ function MobileProjects() {
             x: "1vw",
             duration: 0.3,
         });
+        gsap.to(".bottom-right .github-icon", { opacity: 1, duration: 0.3 });
         setProject(fitnessDescription);
         gsap.to(".project-description", {
             fontSize: "1.3rem",
@@ -236,7 +242,7 @@ function MobileProjects() {
             { borderRadius: "0 0 0 25", duration: 0.7 },
             "-=2"
         );
-
+        gsap.to(".bottom-left .github-icon", { opacity: 1, duration: 0.3 });
         setProject(snakeDescription);
         gsap.to(".project-description", {
             fontSize: "1.3rem",
