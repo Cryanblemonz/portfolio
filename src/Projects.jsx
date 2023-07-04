@@ -48,6 +48,7 @@ let fitnessDescription = {
 function Projects() {
     const [project, setProject] = useState({});
     const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+    const [isRolling, setIsRolling] = useState(false);
 
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
@@ -59,7 +60,11 @@ function Projects() {
                     delay: 0.1,
                 },
             });
-            tl1.from(".grid", { x: "-140vw", rotate: -720, duration: 3 });
+            setIsRolling(true);
+            tl1.from(".grid", { x: "-140vw", rotate: -720, duration: 3 })
+            .then(() => {
+                setIsRolling(false);
+            })
         });
         return () => ctx.revert();
     }, []);
@@ -287,8 +292,9 @@ function Projects() {
                     href="https://www.rescueroadpets.com"
                     target="_blank"
                     className="project top-left"
-                    onMouseEnter={transformTL}
-                    onMouseLeave={unTransform}>
+
+                    onMouseEnter={!isRolling && transformTL}
+                    onMouseLeave={!isRolling && unTransform}>
                     <a
                         href="https://github.com/Cryanblemonz/RescueRoad"
                         target="_blank">
@@ -301,8 +307,8 @@ function Projects() {
                     href="https://gymgenie-42u8.onrender.com"
                     target="_blank"
                     className="project top-right"
-                    onMouseEnter={transformTR}
-                    onMouseLeave={unTransform}>
+                    onMouseEnter={!isRolling && transformTR}
+                    onMouseLeave={!isRolling && unTransform}>
                     <a
                         href="https://github.com/Cryanblemonz/GymGenie"
                         target="_blank">
@@ -315,8 +321,8 @@ function Projects() {
                     href="https://cryanblemonz.github.io/Snake-Game/"
                     target="_blank"
                     className="project bottom-left"
-                    onMouseEnter={transformBL}
-                    onMouseLeave={unTransform}>
+                    onMouseEnter={!isRolling && transformBL}
+                    onMouseLeave={!isRolling && unTransform}>
                     <a
                         href="https://github.com/Cryanblemonz/Snake-Game"
                         target="_blank">
@@ -329,8 +335,8 @@ function Projects() {
                     href="https://www.kwebbfitness.com/"
                     target="_blank"
                     className="project bottom-right"
-                    onMouseEnter={transformBR}
-                    onMouseLeave={unTransform}>
+                    onMouseEnter={!isRolling && transformBR}
+                    onMouseLeave={!isRolling && unTransform}>
                     <a
                         href="https://github.com/Cryanblemonz/KWebbFitness"
                         target="_blank">
