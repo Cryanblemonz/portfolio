@@ -323,6 +323,12 @@ label:focus {
   }
 }
 
+@media (max-width: 425px){
+  .contact h3{
+    font-size: 1.5rem;
+  }
+}
+
 @media (max-width: 600px) {
     .headshot-div{
       height: auto;
@@ -353,7 +359,7 @@ label:focus {
         margin: 0 auto !important;
         display: block;
     }
-    .contact h3 {
+    .want-to {
         text-align: left;
         margin-left: 20px;
         font-size: 1.8rem;
